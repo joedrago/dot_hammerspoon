@@ -8,23 +8,24 @@ end
 local KEY_TOGGLE = hs.keycodes.map["F5"]
 local KEY_Q = hs.keycodes.map["q"]
 local KEY_E = hs.keycodes.map["e"]
+local KEY_SLASH = hs.keycodes.map["/"]
+local KEY_ENTER = hs.keycodes.map["return"]
+local KEY_DELETE = hs.keycodes.map["delete"]
+
+local AUTOMATIC_STOP_TIME = 0 -- 50 * 9
 
 -- Actions
 local ACTIONS = {
-    ["Q"] = {
-        "7", "8", "9", "0", "-", "=", "pad7", "pad8", "pad9",          -- send keys
-        0,0,0,0,0,0,0,0,0,0,0,0,0,                                     -- wait
-    },
-    ["E"] = {
-        "F7", "F8", "F9", "F10", "F11", "F12", "pad4", "pad5", "pad6", -- send keys
-        0,0,0,0,0,0,0,0,0,0,0,0,0,                                     -- wait
-    }
+    ["Q"] = {0,0,0}, -- set by toggleBMAOE()
+    ["E"] = {0,0,0}  -- set by toggleBMAOE()
 }
 
 -- Globals
 local facerollActive = true
 local facerollMode = nil
 local facerollTick = 0
+local facerollCountdown = 0
+local facerollBM = true -- immediately disabled on load
 
 local wowApplication = nil
 local function sendKeyToWow(keyName)
@@ -36,10 +37,80 @@ local function sendKeyToWow(keyName)
     end
 end
 
+local function updateActions()
+    if not facerollActive then
+        print("Faceroll: OFF")
+    elseif facerollBM then
+        print("Faceroll: BM (F7 pressed exclusively on occasion)")
+
+        ACTIONS["Q"] = {
+            "7", "8", "9", "0", "-", "=", "pad7", "pad8", "pad9",          -- send keys
+            0,0,0,0,0,0,0,0,0,0,0,0,0,                                     -- wait
+            0,0,0,0,0,0,0,                                                 -- wait
+        }
+
+        ACTIONS["E"] = { -- BM AoE (presses F7 a bit every 6 seconds)
+            "F7", "F7", "F7", "F7", "F7", "F7", "F7", "F7", "F7",
+            "F7", "F7", "F7", "F7", "F7", "F7", "F7", "F7", "F7",
+            "F7", "F7", "F7", "F7", "F7", "F7", "F7", "F7", "F7",
+            0,0,0,0,0,0,0,0,0,0,0,0,0,                                     -- wait
+            -- 0,0,0,0,0,0,0,                                                 -- wait
+
+            "F8", "F9", "F10", "F11", "F12", "pad4", "pad5", "pad6", -- send keys
+            0,0,0,0,0,0,0,0,0,0,0,0,0,                                     -- wait
+            0,0,0,0,0,0,0,                                                 -- wait
+
+            "F8", "F9", "F10", "F11", "F12", "pad4", "pad5", "pad6", -- send keys
+            0,0,0,0,0,0,0,0,0,0,0,0,0,                                     -- wait
+            0,0,0,0,0,0,0,                                                 -- wait
+
+            "F8", "F9", "F10", "F11", "F12", "pad4", "pad5", "pad6", -- send keys
+            0,0,0,0,0,0,0,0,0,0,0,0,0,                                     -- wait
+            0,0,0,0,0,0,0,                                                 -- wait
+
+            "F8", "F9", "F10", "F11", "F12", "pad4", "pad5", "pad6", -- send keys
+            0,0,0,0,0,0,0,0,0,0,0,0,0,                                     -- wait
+            0,0,0,0,0,0,0,                                                 -- wait
+
+            "F8", "F9", "F10", "F11", "F12", "pad4", "pad5", "pad6", -- send keys
+            0,0,0,0,0,0,0,0,0,0,0,0,0,                                     -- wait
+            0,0,0,0,0,0,0,                                                 -- wait
+
+            -- "F8", "F9", "F10", "F11", "F12", "pad4", "pad5", "pad6", -- send keys
+            -- 0,0,0,0,0,0,0,0,0,0,0,0,0,                                     -- wait
+            -- "F8", "F9", "F10", "F11", "F12", "pad4", "pad5", "pad6", -- send keys
+            -- 0,0,0,0,0,0,0,0,0,0,0,0,0,                                     -- wait
+            -- "F8", "F9", "F10", "F11", "F12", "pad4", "pad5", "pad6", -- send keys
+            -- 0,0,0,0,0,0,0,0,0,0,0,0,0,                                     -- wait
+        }
+    else
+        print("Faceroll: ON (Regular AOE Active)")
+
+        ACTIONS["Q"] = {
+            "7", "8", "9", "0", "-", "=", "pad7", "pad8", "pad9",          -- send keys
+            0,0,0,0,0,0,0,0,0,0,0,0,0,                                     -- wait
+        }
+
+        ACTIONS["E"] = { -- standard AoE
+            "F7", "F8", "F9", "F10", "F11", "F12", "pad4", "pad5", "pad6", -- send keys
+            0,0,0,0,0,0,0,0,0,0,0,0,0,                                     -- wait
+        }
+    end
+end
+
 local wowTick = hs.timer.new(0.02, function()
     if facerollMode == nil then
         -- FRDEBUG("BAIL 1")
         return
+    end
+
+    if facerollCountdown > 0 then
+        facerollCountdown = facerollCountdown - 1
+        if facerollCountdown <= 0 then
+            FRDEBUG("Faceroll: Countdown Reset")
+            facerollMode = nil
+            return
+        end
     end
 
     local actions = ACTIONS[facerollMode]
@@ -74,13 +145,30 @@ local wowTapKey = hs.eventtap.new({hs.eventtap.event.types.keyDown}, function(ev
     local keyCode = event:getKeyCode()
     -- FRDEBUG("lole key " .. keyCode)
 
-    if keyCode == KEY_TOGGLE then
-        facerollActive = not facerollActive
+    if keyCode == KEY_SLASH or keyCode == KEY_ENTER or keyCode == KEY_DELETE then
+        setFacerollActive(false)
+    elseif keyCode == KEY_TOGGLE then
+
+        facerollTick = 0
         if facerollActive then
-            FRDEBUG("Faceroll: Active")
+            if facerollBM then
+                facerollActive = false
+                facerollBM = false
+            else
+                facerollActive = true
+                facerollBM = true
+            end
+        else
+            facerollActive = true
+        end
+
+        updateActions()
+
+        if facerollActive and facerollBM then
+            sendKeyToWow("6")
+        elseif facerollActive then
             sendKeyToWow("[")
         else
-            FRDEBUG("Faceroll: Inactive")
             sendKeyToWow("]")
         end
     elseif facerollActive then
@@ -92,6 +180,7 @@ local wowTapKey = hs.eventtap.new({hs.eventtap.event.types.keyDown}, function(ev
                 wowTick:stop()
                 wowTick:start()
             end
+            facerollCountdown = AUTOMATIC_STOP_TIME
             return true
         elseif keyCode == KEY_E then
             FRDEBUG("Faceroll: E")
@@ -101,6 +190,7 @@ local wowTapKey = hs.eventtap.new({hs.eventtap.event.types.keyDown}, function(ev
                 wowTick:stop()
                 wowTick:start()
             end
+            facerollCountdown = 0
             return true
         end
     end
@@ -146,3 +236,4 @@ WoWFilter:subscribe(hs.window.filter.windowUnfocused, function(w)
 end)
 
 print("Faceroll loaded.")
+updateActions()
