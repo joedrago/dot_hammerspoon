@@ -1,3 +1,4 @@
+-----------------------------------------------------------------------------------------
 -- World of Warcraft Faceroll Logic
 
 -- WAs:
@@ -17,16 +18,24 @@
 -- F7-F12 num4 num5 num6    - AOE rotatoe
 -- Q, E, F5, /, enter, del  - automatic (see below)
 
+-----------------------------------------------------------------------------------------
+-- Basic debug stuff
+
 function FRDEBUG(text)
     -- print("Faceroll: " .. text)
 end
+
+-----------------------------------------------------------------------------------------
+-- UDP socket listening for game bits
 
 function onGameBits(newBits, addr)
     print("onGameBits: " .. newBits)
 end
 server = hs.socket.udp.server(9001, onGameBits):receive()
 
+-----------------------------------------------------------------------------------------
 -- Constants
+
 local KEY_TOGGLE = hs.keycodes.map["F5"]
 local KEY_MODE = hs.keycodes.map["F5"]
 local KEY_Q = hs.keycodes.map["q"]
@@ -38,23 +47,30 @@ local KEY_DELETE = hs.keycodes.map["delete"]
 local MODE_OFF = 0
 local MODE_ON = 1
 local MODE_BM = 2
-local MODE_LAST = 2
+local MODE_MM = 3
+local MODE_LAST = 3
 
 local MODE_NAMES = {}
 MODE_NAMES[MODE_OFF] = "Off"
 MODE_NAMES[MODE_ON] = "On"
 MODE_NAMES[MODE_BM] = "BM"
+MODE_NAMES[MODE_MM] = "MM"
 
 local ACTION_NONE = 0
 local ACTION_Q = 1
 local ACTION_E = 2
 
+-----------------------------------------------------------------------------------------
 -- Globals
+
 local facerollMode = MODE_OFF       -- Which spec are we trying to be right now?
 local facerollActive = true         -- An additional way to temporarily behave like MODE_OFF when people hit enter/slash/delete
 local facerollAction = ACTION_NONE  -- Which faceroll key action is running? (the "paradigm")
 local facerollModeSendRemaining = 0 -- Where are with our rotary-phone-sending of the mode number
 local facerollNextActionIndex = 0   -- When invoking nextAction(), where are we in the cycle?
+
+-----------------------------------------------------------------------------------------
+-- App interation
 
 local wowApplication = nil
 local function sendKeyToWow(keyName)
@@ -65,6 +81,9 @@ local function sendKeyToWow(keyName)
         hs.eventtap.keyStroke({}, keyName, 20000, wowApplication)
     end
 end
+
+-----------------------------------------------------------------------------------------
+-- nextAction system
 
 local ACTIONS = {
     [MODE_ON] = {
@@ -151,6 +170,9 @@ local function nextAction(actions)
     end
 end
 
+-----------------------------------------------------------------------------------------
+-- The heart of action ticks
+
 local wowTick = hs.timer.new(0.02, function()
     -- FRDEBUG("wowTick")
     if not facerollActive or facerollAction == ACTION_NONE then
@@ -161,9 +183,15 @@ local wowTick = hs.timer.new(0.02, function()
     or facerollMode == MODE_BM
     then
         nextAction(ACTIONS[facerollMode][facerollAction])
+    elseif facerollMode == MODE_MM then
+        print("MM thinky time")
     end
+
     return
 end, true)
+
+-----------------------------------------------------------------------------------------
+-- The mechanism used to tell the game which mode we're in (like a rotary phone would)
 
 local wowSendModeTick = hs.timer.new(0.05, function()
     -- FRDEBUG("wowSendModeTick")
@@ -184,6 +212,9 @@ local function updateMode()
 
     print("Faceroll: " .. MODE_NAMES[facerollMode])
 end
+
+-----------------------------------------------------------------------------------------
+-- Key handlers
 
 local wowTapKey = hs.eventtap.new({hs.eventtap.event.types.keyDown}, function(event)
     -- local flags = event:getFlags()
@@ -234,6 +265,9 @@ local wowTapFlags = hs.eventtap.new({hs.eventtap.event.types.flagsChanged}, func
     end
 end)
 
+-----------------------------------------------------------------------------------------
+-- Window listener stuff
+
 local function facerollListenStart()
     print("facerollListenStart()")
     wowTapKey:start()
@@ -264,5 +298,7 @@ WoWFilter:subscribe(hs.window.filter.windowUnfocused, function(w)
         end
     end
 end)
+
+-----------------------------------------------------------------------------------------
 
 print("Faceroll loaded.")
