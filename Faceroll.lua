@@ -55,13 +55,15 @@ local MODE_OFF = 0
 local MODE_ON = 1
 local MODE_BM = 2
 local MODE_MM = 3
-local MODE_LAST = 3
+local MODE_ELE = 4
+local MODE_LAST = 4
 
 local MODE_NAMES = {}
 MODE_NAMES[MODE_OFF] = "Off"
 MODE_NAMES[MODE_ON] = "On"
 MODE_NAMES[MODE_BM] = "BM"
 MODE_NAMES[MODE_MM] = "MM"
+MODE_NAMES[MODE_ELE] = "Ele"
 
 local ACTION_NONE = 0
 local ACTION_Q = 1
@@ -278,6 +280,10 @@ local function nextMM()
             -- uptime remaining than the channel time (2s).
             sendKeyToWow("8") -- rapid fire
 
+        elseif explosiveshot > 0 then
+            -- Use Explosive Shot whenever possible.
+            sendKeyToWow("0") -- explosive shot
+
         elseif aimedshot > 0 and streamline > 0 then
             -- Use Aimed Shot as often as you can. Most of the time, we want to
             -- get rid of our Precise Shots stacks first, but if you have both a
@@ -286,14 +292,69 @@ local function nextMM()
             -- apply Trick Shots first.
             sendKeyToWow("9") -- aimed shot
 
-        elseif explosiveshot > 0 then
-            -- Use Explosive Shot whenever possible.
-            sendKeyToWow("0") -- explosive shot
-
         else
             -- Cast Steady Shot as a filler and Focus generator, when nothing
             -- higher in the priority list is available.
             sendKeyToWow("-") -- steady shot
+        end
+    end
+end
+
+
+-----------------------------------------------------------------------------------------
+-- Elemental
+
+local function nextElemental()
+    facerollNextActionIndex = facerollNextActionIndex + 1
+    if facerollNextActionIndex > 10 then
+        facerollNextActionIndex = 0
+    end
+    if facerollNextActionIndex > 1 then
+        -- Slow down!
+        return
+    end
+
+    local tempest = bitand(facerollGameBits, 0x1)
+    local enough_maelstrom = bitand(facerollGameBits, 0x2)
+    local flameshock_on_target = bitand(facerollGameBits, 0x4)
+    local stormkeeper = bitand(facerollGameBits, 0x8)
+
+    if facerollAction == ACTION_Q then
+        -- Single Target
+
+        if facerollNextActionIndex == 0 then
+            sendKeyToWow("pad9") -- signal we're in ST
+
+        elseif stormkeeper > 0 then
+            sendKeyToWow("=") -- stormkeeper
+
+        elseif flameshock_on_target == 0 then
+            sendKeyToWow("-") -- flame shock
+
+        elseif enough_maelstrom > 0 then
+            sendKeyToWow("0") -- earth shock
+
+        else
+            sendKeyToWow("7") -- lightning bolt
+        end
+
+    elseif facerollAction == ACTION_E then
+        -- AOE
+
+        if facerollNextActionIndex == 0 then
+            sendKeyToWow("pad6") -- signal we're in AOE
+
+        elseif stormkeeper > 0 then
+            sendKeyToWow("=") -- stormkeeper
+
+        elseif tempest > 0 then
+            sendKeyToWow("7") -- "tempest" (its actually just lightning bolt)
+
+        elseif enough_maelstrom > 0 then
+            sendKeyToWow("9") -- earthquake
+
+        else
+            sendKeyToWow("8") -- chain lightning
         end
     end
 end
@@ -313,6 +374,8 @@ local wowTick = hs.timer.new(0.02, function()
         nextAction(ACTIONS[facerollMode][facerollAction])
     elseif facerollMode == MODE_MM then
         nextMM()
+    elseif facerollMode == MODE_ELE then
+        nextElemental()
     end
 
     return

@@ -21,6 +21,10 @@ local buffs = {
         ["id"]=0,
         ["name"]="Moving Target",
     },
+    ["tempest"] = {
+        ["id"]=0,
+        ["name"]="Tempest",
+    },
 }
 
 local function calcBitsMarksmanship()
@@ -55,12 +59,46 @@ local function calcBitsMarksmanship()
     return bits
 end
 
+local function calcBitsElemental()
+    local bits = 0
+    if buffs.tempest.id ~= 0 then
+        bits = bits + 0x1
+    end
+    if UnitPower("player") >= 55 then
+        bits = bits + 0x2
+    end
+    local name, _, _, _, fullDuration, expirationTime = AuraUtil.FindAuraByName("Flame Shock", "target", "HARMFUL")
+    if (name ~= nil) then
+        local remainingDuration = expirationTime - GetTime()
+        if remainingDuration > (fullDuration * 0.3) then
+            bits = bits + 0x4
+        end
+    end
+    if C_Spell.GetSpellCooldown("Stormkeeper").duration < 1.5 then
+        bits = bits + 0x8
+    end
+    return bits
+end
+
 local function updateBits()
     local _, playerClass = UnitClass("player")
     local spec = GetSpecialization()
 
     if (playerClass == "HUNTER") and (spec == 2) then
         local bits = calcBitsMarksmanship()
+        background:Show()
+
+        local b = 1
+        for bitIndex = 0,15 do
+            if bit.band(bits, b)==0 then
+                cells[bitIndex]:Hide()
+            else
+                cells[bitIndex]:Show()
+            end
+            b = b * 2
+        end
+    elseif (playerClass == "SHAMAN") and (spec == 1) then
+        local bits = calcBitsElemental()
         background:Show()
 
         local b = 1
@@ -150,8 +188,10 @@ local function onevent(self, event, arg1, arg2, ...)
     elseif event == "PLAYER_ENTERING_WORLD" then
     elseif event == "UNIT_SPELLCAST_SUCCEEDED" then
         updateBits()
-    elseif event == "UNIT_AURA" and arg1 == "player" then
-        onPlayerAura(arg2)
+    elseif event == "UNIT_AURA" then
+        if arg1 == "player" then
+            onPlayerAura(arg2)
+        end
         updateBits()
     end
 end
