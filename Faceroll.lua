@@ -211,6 +211,7 @@ local function nextMM()
     local rapidfire = bitand(facerollGameBits, 0x40)
     local explosiveshot = bitand(facerollGameBits, 0x80)
     local killshot = bitand(facerollGameBits, 0x100)
+    local lowfocus = bitand(facerollGameBits, 0x200)
 
     if facerollAction == ACTION_Q then
         -- Single Target
@@ -221,6 +222,14 @@ local function nextMM()
         elseif (preciseshots > 0) and (killshot > 0) then
             -- Use Kill Shot when you have a Precise Shots stack.
             sendKeyToWow("=") -- kill shot
+
+        elseif lowfocus > 0 and rapidfire > 0 then
+            -- prioritize rapid fire a bit higher here for some quick focus
+            sendKeyToWow("8") -- rapid fire
+
+        elseif lowfocus > 0 then
+            -- We're super low on focus and don't have rapid fire, just steady shot once
+            sendKeyToWow("-") -- steady shot
 
         elseif (preciseshots > 0) and (spottersmark == 0) and (movingtarget == 0) then
             -- Spend Precise Shots stacks with Arcane Shot, which generates
@@ -261,6 +270,10 @@ local function nextMM()
 
         if facerollNextActionIndex == 0 then
             sendKeyToWow("pad6") -- signal we're in AOE
+
+        elseif lowfocus > 0 then
+            -- We're super low on focus and don't want to spend rapid fire without trickshots, just steady shot once
+            sendKeyToWow("-") -- steady shot
 
         elseif (trickShots == 0) or ((preciseshots > 0) and (spottersmark == 0) and (movingtarget == 0)) then
             -- You should use Multi-Shot to activate Trick Shots if it is down.

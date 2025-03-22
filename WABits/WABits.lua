@@ -56,6 +56,9 @@ local function calcBitsMarksmanship()
     if C_Spell.IsSpellUsable("Kill Shot") and C_Spell.GetSpellCooldown("Kill Shot").duration < 1.5 then
         bits = bits + 0x100
     end
+    if UnitPower("player") < 30 then
+        bits = bits + 0x200
+    end
     return bits
 end
 
