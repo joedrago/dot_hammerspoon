@@ -19,19 +19,26 @@
 -- Q, E, F5, /, enter, del  - automatic (see below)
 
 -----------------------------------------------------------------------------------------
--- Basic debug stuff
+-- Basic debug/helper stuff
 
 function FRDEBUG(text)
     -- print("Faceroll: " .. text)
 end
 
------------------------------------------------------------------------------------------
--- UDP socket listening for game bits
-
-function onGameBits(newBits, addr)
-    print("onGameBits: " .. newBits)
+function bitand(a, b)
+    local result = 0
+    local bitval = 1
+    while a > 0 and b > 0 do
+      if a % 2 == 1 and b % 2 == 1 then -- test the rightmost bits
+          result = result + bitval      -- set the current bit
+      end
+      bitval = bitval * 2 -- shift left
+      a = math.floor(a/2) -- shift right
+      b = math.floor(b/2)
+    end
+    return result
 end
-server = hs.socket.udp.server(9001, onGameBits):receive()
+
 
 -----------------------------------------------------------------------------------------
 -- Constants
@@ -68,6 +75,16 @@ local facerollActive = true         -- An additional way to temporarily behave l
 local facerollAction = ACTION_NONE  -- Which faceroll key action is running? (the "paradigm")
 local facerollModeSendRemaining = 0 -- Where are with our rotary-phone-sending of the mode number
 local facerollNextActionIndex = 0   -- When invoking nextAction(), where are we in the cycle?
+local facerollGameBits = 0          -- The current game state!
+
+-----------------------------------------------------------------------------------------
+-- UDP socket listening for game bits
+
+function onGameBits(newBits, addr)
+    -- print("onGameBits: " .. newBits)
+    facerollGameBits = tonumber(newBits)
+end
+server = hs.socket.udp.server(9001, onGameBits):receive()
 
 -----------------------------------------------------------------------------------------
 -- App interation
@@ -171,6 +188,117 @@ local function nextAction(actions)
 end
 
 -----------------------------------------------------------------------------------------
+-- Marksmanship
+
+local function nextMM()
+    facerollNextActionIndex = facerollNextActionIndex + 1
+    if facerollNextActionIndex > 10 then
+        facerollNextActionIndex = 0
+    end
+    if facerollNextActionIndex > 1 then
+        -- Slow down!
+        return
+    end
+
+    local trickShots = bitand(facerollGameBits, 0x1)
+    local streamline = bitand(facerollGameBits, 0x2)
+    local preciseshots = bitand(facerollGameBits, 0x4)
+    local spottersmark = bitand(facerollGameBits, 0x8)
+    local movingtarget = bitand(facerollGameBits, 0x10)
+    local aimedshot = bitand(facerollGameBits, 0x20)
+    local rapidfire = bitand(facerollGameBits, 0x40)
+    local explosiveshot = bitand(facerollGameBits, 0x80)
+    local killshot = bitand(facerollGameBits, 0x100)
+
+    if facerollAction == ACTION_Q then
+        -- Single Target
+
+        if facerollNextActionIndex == 0 then
+            sendKeyToWow("pad9") -- signal we're in ST
+
+        elseif (preciseshots > 0) and (killshot > 0) then
+            -- Use Kill Shot when you have a Precise Shots stack.
+            sendKeyToWow("=") -- kill shot
+
+        elseif (preciseshots > 0) and (spottersmark == 0) and (movingtarget == 0) then
+            -- Spend Precise Shots stacks with Arcane Shot, which generates
+            -- Streamline to reduce Aimed Shot’s cast time and Focus cost. You
+            -- should skip this line if you either have a Spotter's Mark proc,
+            -- or you already have Moving Target from having spent Precise Shots
+            -- previously.
+            sendKeyToWow("pad7") -- arcane shot
+
+        elseif rapidfire > 0 then
+            -- Cast Rapid Fire on cooldown to generate Streamline, Deathblow,
+            -- Precise Shots (if No Scope is specced), and In the Rhythm. It
+            -- also activates Lunar Storm. Delay it for up to 7 seconds if Lunar
+            -- Storm is coming off cooldown soon, in order to activate the Lunar
+            -- Storm the moment it becomes available.
+            sendKeyToWow("8") -- rapid fire
+
+        elseif aimedshot > 0 and streamline > 0 then
+            -- Use Aimed Shot as often as you can. Most of the time, we want to
+            -- get rid of our Precise Shots stacks first, but if you have both a
+            -- Spotter's Mark proc and  Moving Target up, you should just cast
+            -- Aimed Shot regardless.
+            sendKeyToWow("9") -- aimed shot
+
+        elseif explosiveshot > 0 then
+            -- Use Explosive Shot whenever possible.
+            sendKeyToWow("0") -- explosive shot
+
+        else
+            -- Use Steady Shot as a Focus generator when no other abilities are
+            -- available. Each cast gives 20 Focus, so avoid casting multiple
+            -- times in a row if you risk Focus capping.
+            sendKeyToWow("-") -- steady shot
+        end
+
+    elseif facerollAction == ACTION_E then
+        -- AOE
+
+        if facerollNextActionIndex == 0 then
+            sendKeyToWow("pad6") -- signal we're in AOE
+
+        elseif (trickShots == 0) or ((preciseshots > 0) and (spottersmark == 0) and (movingtarget == 0)) then
+            -- You should use Multi-Shot to activate Trick Shots if it is down.
+            -- You should also use it to spend Precise Shots stacks, but only if
+            -- you do not have both Spotter's Mark and Moving Target active. If
+            -- we have either of these buffs, we can just cast Aimed Shot,
+            -- provided we have a Trick Shots.
+            sendKeyToWow("7") -- multishot
+
+        elseif rapidfire > 0 then
+            -- Cast Rapid Fire on cooldown to generate Streamline, Deathblow,
+            -- Precise Shots (if No Scope is specced), and In the Rhythm. It
+            -- also activates Lunar Storm. Delay it for up to 7 seconds if Lunar
+            -- Storm is coming off cooldown soon, in order to activate the Lunar
+            -- Storm the moment it becomes available. You should ensure that
+            -- Trick Shots is active before you cast it, and ideally with more
+            -- uptime remaining than the channel time (2s).
+            sendKeyToWow("8") -- rapid fire
+
+        elseif aimedshot > 0 and streamline > 0 then
+            -- Use Aimed Shot as often as you can. Most of the time, we want to
+            -- get rid of our Precise Shots stacks first, but if you have both a
+            -- Spotter's Mark proc and  Moving Target up, you should just cast
+            -- Aimed Shot regardless. Of course, we should always make sure to
+            -- apply Trick Shots first.
+            sendKeyToWow("9") -- aimed shot
+
+        elseif explosiveshot > 0 then
+            -- Use Explosive Shot whenever possible.
+            sendKeyToWow("0") -- explosive shot
+
+        else
+            -- Cast Steady Shot as a filler and Focus generator, when nothing
+            -- higher in the priority list is available.
+            sendKeyToWow("-") -- steady shot
+        end
+    end
+end
+
+-----------------------------------------------------------------------------------------
 -- The heart of action ticks
 
 local wowTick = hs.timer.new(0.02, function()
@@ -184,7 +312,7 @@ local wowTick = hs.timer.new(0.02, function()
     then
         nextAction(ACTIONS[facerollMode][facerollAction])
     elseif facerollMode == MODE_MM then
-        print("MM thinky time")
+        nextMM()
     end
 
     return

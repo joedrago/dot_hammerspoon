@@ -1,0 +1,7 @@
+## Interface: 110002
+## Title: WABits
+## Notes: WABits
+## Version: 1.0
+## DefaultState: enabled
+## Author: Monza
+WABits.lua
