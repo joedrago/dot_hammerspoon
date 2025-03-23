@@ -230,43 +230,22 @@ local function calcBitsOutlaw()
     local kirCount = 0
     local goodRtbCount = 0
     local rtbCount = 0
-    if buffs.rtb1.id ~= 0 then
-        goodRtbCount = goodRtbCount + 1
-        kirCount = kirCount + 1
-        if not buffs.rtb1.cto then
-            rtbCount = rtbCount + 1
-        end
-    end
-    if buffs.rtb2.id ~= 0 then
-        goodRtbCount = goodRtbCount + 1
-        kirCount = kirCount + 1
-        if not buffs.rtb2.cto then
-            rtbCount = rtbCount + 1
-        end
-    end
-    if buffs.rtb3.id ~= 0 then
-        goodRtbCount = goodRtbCount + 1
-        kirCount = kirCount + 1
-        if not buffs.rtb3.cto then
-            rtbCount = rtbCount + 1
-        end
-    end
-    if buffs.rtb4.id ~= 0 then
-        kirCount = kirCount + 1
-        if not buffs.rtb4.cto then
-            rtbCount = rtbCount + 1
-        end
-    end
-    if buffs.rtb5.id ~= 0 then
-        kirCount = kirCount + 1
-        if not buffs.rtb5.cto then
-            rtbCount = rtbCount + 1
-        end
-    end
-    if buffs.rtb6.id ~= 0 then
-        kirCount = kirCount + 1
-        if not buffs.rtb6.cto then
-            rtbCount = rtbCount + 1
+
+    local rtbShortest = 1000
+    for rtbIndex = 1,6 do
+        local rtbName = "rtb" .. rtbIndex
+        if buffs[rtbName].id ~= 0 then
+            if rtbIndex <= 3 then
+                goodRtbCount = goodRtbCount + 1
+            end
+            kirCount = kirCount + 1
+            if not buffs[rtbName].cto then
+                rtbCount = rtbCount + 1
+            end
+            local remaining = math.max(buffs[rtbName].expirationTime - GetTime(), 0)
+            if rtbShortest > remaining then
+                rtbShortest = remaining
+            end
         end
     end
 
@@ -276,7 +255,7 @@ local function calcBitsOutlaw()
     local cp = GetComboPoints("player", "target")
     -- print("energy " .. energy .. " cp " .. cp)
 
-    if kirCount >= 4 then
+    if kirCount >= 4 and rtbShortest < 2 then
         bits = bits + 0x1
     end
     if rtbCount <= 2 and goodRtbCount == 0 or rtbNeedsAPressAfterKIR then
@@ -347,6 +326,8 @@ local function calcBitsOutlaw()
         o = o .. "kirCount: " .. kirCount .. "\n"
         o = o .. "rtbNeeds: " .. bt(rtbNeedsAPressAfterKIR) .. "\n"
         o = o .. "\n"
+        o = o .. "rtbShort: " .. rtbShortest .. "\n"
+        o = o .. "\n"
         o = o .. "rtb1: remain: " .. bt(buffs.rtb1.remain) .. " cto: " .. bt(buffs.rtb1.cto) .. "  [" .. buffs.rtb1.id .. "]\n"
         o = o .. "rtb2: remain: " .. bt(buffs.rtb2.remain) .. " cto: " .. bt(buffs.rtb2.cto) .. "  [" .. buffs.rtb2.id .. "]\n"
         o = o .. "rtb3: remain: " .. bt(buffs.rtb3.remain) .. " cto: " .. bt(buffs.rtb3.cto) .. "  [" .. buffs.rtb3.id .. "]\n"
@@ -385,6 +366,7 @@ local function resetEverything()
         buff.id = 0
         buff.remain = false
         buff.cto = false
+        buff.expirationTime = 0
     end
 end
 
@@ -417,6 +399,7 @@ local function onPlayerAura(info)
                         end
                     else
                         buff.id = aura.auraInstanceID
+                        buff.expirationTime = aura.expirationTime
 
                         local auraRemaining = aura.expirationTime - GetTime()
                         local rtbRemaining = math.max(rtbEnd - GetTime(), 0)
@@ -434,8 +417,9 @@ local function onPlayerAura(info)
 			local aura = C_UnitAuras.GetAuraDataByAuraInstanceID("player", v)
             if aura ~= nil then
                 for _, buff in pairs(buffs) do
-                    if aura.name == buff.name and buff.rtb and aura.duration > 10 then
+                    if aura.name == buff.name then
                         buff.id = aura.auraInstanceID
+                        buff.expirationTime = aura.expirationTime
 
                         local auraRemaining = aura.expirationTime - GetTime()
                         local rtbRemaining = math.max(rtbEnd - GetTime(), 0)
@@ -453,6 +437,7 @@ local function onPlayerAura(info)
                 if buff.id == id then
                     -- print("Lost: " .. buff.name)
                     buff.id = 0
+                    buff.expirationTime = 0
                     buff.remain = false
                     buff.cto = false
                 end
