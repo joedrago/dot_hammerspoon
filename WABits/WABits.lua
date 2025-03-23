@@ -1,4 +1,8 @@
+local debugOverlayEnabled = false
+
 local background = nil
+local debugOverlay = nil
+local debugOverlayText = nil
 local cells = {}
 local buffs = {
     -- Elemental Shaman
@@ -76,64 +80,55 @@ local buffs = {
         ["name"]="Audacity",
     },
 
-    -- Keep It Rolling buffs (any 4)
-    ["kir1"] = {
-        ["id"]=0,
-        ["name"]="Broadside",
-    },
-    ["kir2"] = {
-        ["id"]=0,
-        ["name"]="Ruthless Precision",
-    },
-    ["kir3"] = {
-        ["id"]=0,
-        ["name"]="True Bearing",
-    },
-    ["kir4"] = {
-        ["id"]=0,
-        ["name"]="Grand Melee",
-    },
-    ["kir5"] = {
-        ["id"]=0,
-        ["name"]="Buried Treasure",
-    },
-    ["kir6"] = {
-        ["id"]=0,
-        ["name"]="Skull and Crossbones",
-    },
-
     -- Roll the bones buffs (the first 3 are "the good ones")
     ["rtb1"] = {
         ["id"]=0,
         ["name"]="Broadside",
-        ["rtb"]=true,
+        ["remain"]=false,
+        ["cto"]=false,
     },
     ["rtb2"] = {
         ["id"]=0,
         ["name"]="Ruthless Precision",
-        ["rtb"]=true,
+        ["remain"]=false,
+        ["cto"]=false,
     },
     ["rtb3"] = {
         ["id"]=0,
         ["name"]="True Bearing",
-        ["rtb"]=true,
+        ["remain"]=false,
+        ["cto"]=false,
     },
     ["rtb4"] = {
         ["id"]=0,
         ["name"]="Grand Melee",
-        ["rtb"]=true,
+        ["remain"]=false,
+        ["cto"]=false,
     },
     ["rtb5"] = {
         ["id"]=0,
         ["name"]="Buried Treasure",
-        ["rtb"]=true,
+        ["remain"]=false,
+        ["cto"]=false,
     },
     ["rtb6"] = {
         ["id"]=0,
         ["name"]="Skull and Crossbones",
-        ["rtb"]=true,
+        ["remain"]=false,
+        ["cto"]=false,
     },
 }
+
+local rtbStart = 0
+local rtbEnd = 0
+local rtbDelay = 0.1
+local rtbNeeds = false
+
+local function setOverlayText(text)
+    if debugOverlayEnabled and debugOverlayText ~= nil then
+        debugOverlayText:SetText(text)
+    end
+end
 
 local function calcBitsMarksmanship()
     local bits = 0
@@ -233,47 +228,46 @@ local function calcBitsOutlaw()
     local bits = 0
 
     local kirCount = 0
-    if buffs.kir1.id ~=0 then
-        kirCount = kirCount + 1
-    end
-    if buffs.kir2.id ~=0 then
-        kirCount = kirCount + 1
-    end
-    if buffs.kir3.id ~=0 then
-        kirCount = kirCount + 1
-    end
-    if buffs.kir4.id ~=0 then
-        kirCount = kirCount + 1
-    end
-    if buffs.kir5.id ~=0 then
-        kirCount = kirCount + 1
-    end
-    if buffs.kir6.id ~=0 then
-        kirCount = kirCount + 1
-    end
-
     local goodRtbCount = 0
     local rtbCount = 0
     if buffs.rtb1.id ~= 0 then
         goodRtbCount = goodRtbCount + 1
-        rtbCount = rtbCount + 1
+        kirCount = kirCount + 1
+        if not buffs.rtb1.cto then
+            rtbCount = rtbCount + 1
+        end
     end
     if buffs.rtb2.id ~= 0 then
         goodRtbCount = goodRtbCount + 1
-        rtbCount = rtbCount + 1
+        kirCount = kirCount + 1
+        if not buffs.rtb2.cto then
+            rtbCount = rtbCount + 1
+        end
     end
     if buffs.rtb3.id ~= 0 then
         goodRtbCount = goodRtbCount + 1
-        rtbCount = rtbCount + 1
+        kirCount = kirCount + 1
+        if not buffs.rtb3.cto then
+            rtbCount = rtbCount + 1
+        end
     end
     if buffs.rtb4.id ~= 0 then
-        rtbCount = rtbCount + 1
+        kirCount = kirCount + 1
+        if not buffs.rtb4.cto then
+            rtbCount = rtbCount + 1
+        end
     end
     if buffs.rtb5.id ~= 0 then
-        rtbCount = rtbCount + 1
+        kirCount = kirCount + 1
+        if not buffs.rtb5.cto then
+            rtbCount = rtbCount + 1
+        end
     end
     if buffs.rtb6.id ~= 0 then
-        rtbCount = rtbCount + 1
+        kirCount = kirCount + 1
+        if not buffs.rtb6.cto then
+            rtbCount = rtbCount + 1
+        end
     end
 
     -- print("rtbCount " .. rtbCount .. " goodRtbCount " .. goodRtbCount .. " kirCount " .. kirCount)
@@ -285,7 +279,7 @@ local function calcBitsOutlaw()
     if kirCount >= 4 then
         bits = bits + 0x1
     end
-    if rtbCount <= 2 and goodRtbCount == 0 then
+    if rtbCount <= 2 and goodRtbCount == 0 or rtbNeeds then
         bits = bits + 0x2
     end
 
@@ -333,6 +327,33 @@ local function calcBitsOutlaw()
     end
     if cp >= 6 then
         bits = bits + 0x8000
+    end
+
+    local function bt(b)
+        if b then
+            return "\124cffffff00T\124r"
+        end
+        return "\124cff777777F\124r"
+    end
+
+    if debugOverlayEnabled then
+        local rtbRem = math.max(rtbEnd - GetTime(), 0)
+        local o = ""
+        o = o .. "rtbStart: " .. rtbStart .. "\n"
+        o = o .. "rtbEnd  : " .. rtbEnd .. "\n"
+        o = o .. "rtbRem  : " .. rtbRem .. "\n"
+        o = o .. "\n"
+        o = o .. "rtbCount: " .. rtbCount .. "\n"
+        o = o .. "kirCount: " .. kirCount .. "\n"
+        o = o .. "rtbNeeds: " .. bt(rtbNeeds) .. "\n"
+        o = o .. "\n"
+        o = o .. "rtb1: remain: " .. bt(buffs.rtb1.remain) .. " cto: " .. bt(buffs.rtb1.cto) .. "  [" .. buffs.rtb1.id .. "]\n"
+        o = o .. "rtb2: remain: " .. bt(buffs.rtb2.remain) .. " cto: " .. bt(buffs.rtb2.cto) .. "  [" .. buffs.rtb2.id .. "]\n"
+        o = o .. "rtb3: remain: " .. bt(buffs.rtb3.remain) .. " cto: " .. bt(buffs.rtb3.cto) .. "  [" .. buffs.rtb3.id .. "]\n"
+        o = o .. "rtb4: remain: " .. bt(buffs.rtb4.remain) .. " cto: " .. bt(buffs.rtb4.cto) .. "  [" .. buffs.rtb4.id .. "]\n"
+        o = o .. "rtb5: remain: " .. bt(buffs.rtb5.remain) .. " cto: " .. bt(buffs.rtb5.cto) .. "  [" .. buffs.rtb5.id .. "]\n"
+        o = o .. "rtb6: remain: " .. bt(buffs.rtb6.remain) .. " cto: " .. bt(buffs.rtb6.cto) .. "  [" .. buffs.rtb6.id .. "]\n"
+        setOverlayText(o)
     end
 
     return bits
@@ -386,11 +407,12 @@ local function onPlayerAura(info)
                             buff.id = aura.auraInstanceID
                         end
                     else
-                        if not buff.rtb or aura.duration > 10 then
-                            -- if we get a rtb buff that is super short,
-                            -- we probs got it randomly and don't count it
-                            buff.id = aura.auraInstanceID
-                        end
+                        buff.id = aura.auraInstanceID
+
+                        local auraRemaining = aura.expirationTime - GetTime()
+                        local rtbRemaining = math.max(rtbEnd - GetTime(), 0)
+                        buff.remain = auraRemaining > rtbRemaining + rtbDelay
+                        buff.cto = rtbRemaining > auraRemaining + rtbDelay
                     end
                 end
             end
@@ -405,6 +427,11 @@ local function onPlayerAura(info)
                 for _, buff in pairs(buffs) do
                     if aura.name == buff.name and buff.rtb and aura.duration > 10 then
                         buff.id = aura.auraInstanceID
+
+                        local auraRemaining = aura.expirationTime - GetTime()
+                        local rtbRemaining = math.max(rtbEnd - GetTime(), 0)
+                        buff.remain = auraRemaining > rtbRemaining + rtbDelay
+                        buff.cto = rtbRemaining > auraRemaining + rtbDelay
                     end
                 end
             end
@@ -417,6 +444,8 @@ local function onPlayerAura(info)
                 if buff.id == id then
                     -- print("Lost: " .. buff.name)
                     buff.id = 0
+                    buff.remain = false
+                    buff.cto = false
                 end
             end
         end
@@ -424,7 +453,24 @@ local function onPlayerAura(info)
 end
 
 local function init()
-    -- loltest("init")
+    if debugOverlayEnabled then
+        debugOverlay = CreateFrame("Frame")
+        debugOverlay:SetPoint("TOPLEFT", 0, 0)
+        debugOverlay:SetHeight(300)
+        debugOverlay:SetWidth(300)
+        debugOverlay:SetFrameStrata("TOOLTIP")
+        debugOverlay.texture = debugOverlay:CreateTexture()
+        debugOverlay.texture:SetTexture("Interface/BUTTONS/WHITE8X8")
+        debugOverlay.texture:SetVertexColor(0.0, 0.0, 0.0, 0.9)
+        debugOverlay.texture:SetAllPoints(debugOverlay)
+        debugOverlayText = debugOverlay:CreateFontString(nil, "ARTWORK")
+        debugOverlayText:SetFont("Interface\\Addons\\WeakAuras\\Media\\Fonts\\FiraMono-Medium.ttf", 13, "OUTLINE")
+        debugOverlayText:SetPoint("TOPLEFT",0,0)
+        debugOverlayText:SetJustifyH("LEFT")
+        debugOverlayText:SetJustifyV("TOP")
+        debugOverlayText:Show()
+        debugOverlay:Show()
+    end
 
     background = CreateFrame("Frame")
     background:SetPoint("TOPRIGHT", -155, -5)
@@ -461,6 +507,7 @@ local name, addon = ...
 local f = CreateFrame("Frame")
 local login = true
 local function onevent(self, event, arg1, arg2, ...)
+
     if login and ((event == "ADDON_LOADED" and name == arg1) or (event == "PLAYER_LOGIN")) then
         login = nil
         f:UnregisterEvent("ADDON_LOADED")
@@ -474,6 +521,30 @@ local function onevent(self, event, arg1, arg2, ...)
             onPlayerAura(arg2)
         end
         updateBits()
+    elseif event == "COMBAT_LOG_EVENT_UNFILTERED" then
+        local _, sub_event, _, source, _, _, _, _, _, _, _, spell_id = CombatLogGetCurrentEventInfo()
+        if source == UnitGUID("player") then
+            if spell_id == 381989 then -- keep it rolling
+                if sub_event == "SPELL_CAST_SUCCESS" then
+                    -- print("Keep it rolling! - " .. sub_event)
+                    rtbNeeds = true
+                end
+            elseif spell_id == 315508 then -- roll the bones
+                if sub_event == "SPELL_CAST_SUCCESS" then
+                    -- print("Roll the bones! - " .. sub_event)
+                    rtbNeeds = false
+                elseif sub_event == "SPELL_AURA_APPLIED" then
+                    rtbStart = GetTime()
+                    rtbEnd = rtbStart + 30
+                elseif sub_event == "SPELL_AURA_REFRESH" then
+                    rtbStart = GetTime()
+                    rtbEnd = 30 + rtbStart + math.min(rtbEnd - rtbStart, 9)
+                elseif sub_event == "SPELL_AURA_REMOVED" then
+                    rtbStart = 0
+                    rtbEnd = 0
+                end
+            end
+        end
     end
 end
 f:RegisterEvent("ADDON_LOADED")
@@ -481,4 +552,5 @@ f:RegisterEvent("PLAYER_LOGIN")
 f:RegisterEvent("PLAYER_ENTERING_WORLD")
 f:RegisterEvent("UNIT_AURA")
 f:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
+f:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 f:SetScript("OnEvent", onevent)
