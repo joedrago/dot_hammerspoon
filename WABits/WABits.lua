@@ -174,7 +174,7 @@ local function onPlayerAura(info)
         for _, aura in pairs(info.addedAuras) do
             for _, buff in pairs(buffs) do
                 if aura.name == buff.name then
-                    print("Detected: " .. buff.name)
+                    -- print("Detected: " .. buff.name)
                     if buff.harmful then
                         if aura.isHarmful then
                             buff.id = aura.auraInstanceID
@@ -191,7 +191,7 @@ local function onPlayerAura(info)
 		for _, id in pairs(info.removedAuraInstanceIDs) do
             for _, buff in pairs(buffs) do
                 if buff.id == id then
-                    print("Lost: " .. buff.name)
+                    -- print("Lost: " .. buff.name)
                     buff.id = 0
                 end
             end
