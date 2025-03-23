@@ -346,12 +346,12 @@ local function nextSV()
         if facerollNextActionIndex == 0 then
             sendKeyToWow("pad9") -- signal we're in ST
 
-        elseif lunarstorm > 0 then
+        elseif lunarstorm > 0 and wildfirebomb1 > 0 then
             -- Cast Wildfire Bomb to trigger Lunar Storm whenever it is not on
             -- cooldown, regardless of Tip of the Spear.
             sendKeyToWow("7") -- wildfire bomb
 
-        elseif strikeitrich > 0 and tipofthespear == 0 then
+        elseif strikeitrich > 0 and tipofthespear == 0 and killcommand > 0 then
             -- Cast Raptor Strike (or Mongoose Bite) with Tip of the Spear to
             -- consume Strike it Rich. If you do not have Tip of the Spear, you
             -- can use Kill Command without regard for focus to bruteforce
