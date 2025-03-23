@@ -3,7 +3,7 @@
 
 -- WAs:
 -- FaceRoll:                !WA:2!DA1ZVnoru4gvKwrufnKTSQc4WqyPIvGIwQ0UQCOAvC(bTqsDX2D7UId2J9mozaNzSMzC3eogXbUShOA)licjUG4q2Y1vO9osMQvCgv4mhwH4mJTtlUSTePyPO8EJ)MV5nFVNN3uOv5(LrLrF9n4SizaHI567z1E7DAEmms2JX1dLegvuCcIicdGdTWdKvEhVXErcjRFIx4n9JOEjOE3BueOE4yzeNcQ0YaubuTkagXH2y6bv7Zq4Iyk6yrpiI9G7R77lWY3CHjqQNAP2LrOsxnDll9oHGCRNTpJ3hkTdTLK(4PEfcl9VXWEHiOeBGpatLNOcCMcaXBFcs2tRMYLdtdqXTnesixwuJqjY1oeXSZ4WXn7)WvoxWc2euPJEfxFfCrVIJKCs3UyU4vwJp18x1KddXXx9erKB6QBg57tgmXUEntlBtRAgwJqkktw91Vz1nIx6P17bLGoyHa2fF202LJvtZWC3MTBpjlwS7rqyJKDmAKieheSnsum(QdEPF8m9oDQVpaY7MP8eFq6qGnvbUAXT2ZScGXZnO(UwBRVJAuzpmnDoQ8r6)VibTQvVPHE7221AMdFYZliskeN9YPPFjpcFUf4I520AwCRqmNCVtRzXTcXCYT(oZIBfI5KBnTzXTcXCYDdZzXTcXCYDNzYDN5M79NzDY(ZDDsTzwNuBURt2QXS4wHyEZL1MTINIzo5V923DMF5NI5)L)KFQNSZ5eHpk3XkGChdaY9zli3NzGCFwaYvgdYv2bYvMaa5YRGC5bW50nW52LNEKB6H5lzqH9XIIArQMeUjnHW8XiSR6KDl175B1S9UT2R9Hr0Pnbkg(Qj9xoaBL53rPnF)cHvU8wyk1Zw1ua7eU2Ldka3f6n02pGX49ouGd8t7qg)YA(mQ84w6g1B2ay(P7vZO5yvJedC3KECV(1Ix9yLRl07l6Q6QtrAbmiY)eVaOqydPiBv7eV1CfeA3a8dn6hfij)9rFMZrl7Gk58qNFX5zl7CujNvUUZFTSZFSSZp78noxVKZJk5il54kHbQm51I3Oyy5ib2(882Zi1p51Aj(zgKVeNymkjYnvoBo9oa3l7oalYhKzuympDxKi0AsLMCiKs6N2(82XLAfVQgLrXpfdfytjht7k7DLJpTbBA6JlWEmksmkbtcnXn06dju1CJBe38kXTI)O4TuMV2)DKNRexmNcdURIefDFx4BF5jNqo2JKGAXXQg3yu6Dn(QLcFJlCkzgXVLHhlGX)4TUZF(KN8BlSWclU1D(9h)4FkXI)5QsqI)qT2nBznwY8oilkwTWpSsfcAulOh2GfeSEebnX8(B8j641FaFWGj(Cv1QsmGs4Ipp7MuTsgkzV7Aw3OzZD4dZu3VDzxL24t6wm89U8TgAOQ(N4zl7XXIESa0WrpGXr7ZHHJ2FQXKS0x90TtHcfwCCIOtMExrcnJrLxXlur8ovrAuw4ERQFWhw9wLp4z37Fc
--- FaceRoll Enable/Disable: !WA:2!fwvZUTTXtClOdbGOaw1j1j1TaLqn1iPj1v2k(JCiaX0HcjbswguYjPWn)jxYDP4MqTlXUlDSArVyeuKl5qn6tGU0lf9GqEakkqpwawJC8)PG(ee0hGolPItTJm6cqWzMD(nZS78XwQXm9Nbpd(zFUGNQIPmIO92DBENnTf71omusu3(xt2P8nNAQsJWuzsmAqxYEQQFwWWGuPI3xZLSAyklqr5SlDzdtyjiQubZeLkqUe2Ul0NJjYDog7dnim8HYieM)KVQWtF8uJqSGiUyloLP83WEZU2ojM)l36gYf9rk3exfTpzmxPKkVnu2obJue)08FVcLcIrkAW9PyvK16aRaLhOYvCKkKqzyrzu18hG5UfgXZV4)EL(9JI3qXg8yUW8gMhDovGVUQzGw8XoYv)6fx6AbHHvnxyHIT1eAT1)Z3vuvF0nmo(Tdy8V97oHSDQ9qq8jdJlvTDJgvVQz165RQx(KOwCYO6CVcqRU6KaT0Kb1QLg0ARHq1Q9UGQpzq2nT1OQvRE9RF93f11MmkRCxHqRT2KC1YNYvXMfGghFhhfGOMFiKGLrg7Re0E9ic5)BEXyYVFigQucd7oiHiUTDZTASDtlfW4OTYs7ltiXX3blnELm1NSlHP6aAt3BK7gR3PRBNUR701kfkF811NeHdd1NinCYv1)2euSk6iOBjiauNoBz3S5bPSXHGX8zNF3S5YoBHsYK6nwFdBN2nB6AV56wnTnpbVRvR3k6w3PJw2OIkwxDONv9nCrumXr3MGZoBY))Oc3C)uuYsdl4mVXnmREc)u9YMQiclxp96K3RhN)kMlEKMJBeuIusUmsSKmzpno8)VCvTt30qBe8LDHSpm7tYmZM3qpJ6r5h1DjlHydsEFuoD3IR7wGf)5Ps(OjosPGi7kjZF6tCIj9qbdCdJ5Cr0bigvpDHZwjRsJS5SyCg53iijPJsqy9urN5qmCy0AKNCessaNHL7R1rx1Lv3QpIYaSz1ZU2zYwoBLSvbYp4KsSc5mvsLgubYSfNXnBrW00(dHQlhsp98S5MnBUdbwFuWJ7bZYzyRyoch(QGyKu6IyyxOEoyEFjL1lM8CN(PXk6ZQ8ID8EX0E4kEp37p9E50EVOI35UO3FnT3FpT3pwX7p8(bVlwXtvX7Pv88vOyiloB2nnsMjvsCpUTJCY51BBP5liOFdrtSV(e0by(IXd9FqXq)YlLsXJAztiR84UKgxkzOi)aPVES0ZnhcoQlNdbBs0bssCyXRdwT72TDRHqpfbNpD)PVxYNE6jUebjGkb7w(1aAIGHIVhKpab)uYvoDy4bqpnnWvfjiYiEmEGt(q97wgwIhbDA0WbqnCJUdv8GDlS4fk9lNRkfNC(gOaIdpo20MH8JjF5TOs9)9FcxGVVaLS)9htmkuaJoGQgKcv(1fpc2qlsFl43zdhB7ntQE6Hj0P4cyjWJxCwiT3SwbriiMh8MNWhS99McwhcpicMUDs(tGZbtE8v8Eq5WspMmiZ1cg0gKm7wc4kYeSaRh8UKIRjvliG8WTG99S0J5oSqjyZnGnfysicQNICEIovuEurkoFg9DlvQu5H66EAUxngrzfrpWzmXEXG30lwFgP)YlS41xy5z29Lp4F(d
+-- FaceRoll Enable/Disable: !WA:2!fw1tVnXru8y5dvYQsXeObAAL6kdnck0uNyIt4asKnzTaKDC06navP0DND3z9oW6zwnZSH4w1lrOkUWHg1pb(sVu1dw8bOQ3R02io2tO(ja1B9sFZUMqJXwDKwTV3BE)EV3mZ7pfAmxV58NZ)zFgNLiJiumV9UwnVZ2g8dAheiWYB)RX7v8wZmtHH(erCeQVf(azLp1BGxIqY6P4IxliH6jjm6LVsjnyXXYeovdLWr2y6(l1J5Jf7Dk2hwct9pweI8zp5lZ90hpZqe1lKX3HrOs3nn22YWmw7)4w7agVhsAhBlj9WJ4kex(THYUX(ij2nj73RqjGyKK4DFIVmuFdGLJYcurDtHeXLL0juICXJ8z25gXXn))bf(NtI3a(MSigx7MANCoLGVUMMNs8PoYv(QLx56Ebbv0wAP8TvekTv)Z2LxrD0lv603oGX)2VBmz7v9HG4XdJlxPDJgvUMwLAzRkxzCulpzuDUxoO1wBsGwzYGA1sbA91rOQvFxq1Ms8TRvURQx)g34DrD9jJYOPHcv1Q1QnjuRozu6zbicT(6tkaRpLaC7CqJovNgfGOQBaKwiclDOKt62fZfF9I8rKF)aFi)kiWQFmMFBJM70y3M6sGXuzLvoueJJIUJVO0RejU49XuzhqBYbdT3CJow2DS2W0spbs6Cvz1y(jQTdhdQz2zhJMnnZK4EBmksgAsr9WIshLqhfcLwm987NUq6zZbkIR1yJnnmB3SPTX2BO30qBmEB9wVv0w3PJs2W88CBvONEX3Wfs8XMQIl)0Zg)NNKUN5N8eDsqoN2nVPwLX8tLROjdX0m9uRXVxpn)v1w(enhv(i5j4mz4ibEYEAu4))5QQt30qXh8LEH0pm9ts1sxSKQZ2JYoQ7Jxbr7hFgugTv(1DlWI)8mXF0eBeLtKE14fNEFQiCxKxF7GigJhEeIsu9Ky06PLBKUGoLrX)ggjWDKCmTRm89o2homknYEC4cShJ6louPJkRlTMEpeHcytRLE93lD106PRbKFW4s0dyuzC5geosRfJY0AH9jj9gazCM4UQUGlmF6chdSUiVh3fMaq91Jyi)Gx5fHecBe13gYN9w0vqODJWp3SxsKK8SZ83Z64x2rw255o)GZpw25CxY5sLDEXEoVOSZFnRZwLD(DN)W5LZ68IzDEAzhxjkcEiNp9wLINlrGTpT5dnZ4vBRR4ZjiFdwrCO6q0by(8rtlEq(0IIRKq8h2YaJR)ylCJlhpGNDMu3q6QgUdahzXyq8ghEKahfKpwrVTLv7wdGsnSF2yHN((XxC6VDXCShra2T4Rb0yoffDp4jbe8tXxD6W87dfTepBzihlczr(9nZMgC3IWI)iOyJe0hsJBynqY82p3IxOWVCUke)4Z3a5HnzrrAguKBe(l2Iiu)p8jmU)95O4dV)iIHbCO3aK4GKOIVoF6zdLi1TGBNnnnm2oUY0dtOyXgWIHPEmAaP786EHiiM7)Mz)939EZaRJHjPGPBhNn7CbO5JRK1fYiw5X4(P26qVwV453HdxrAGfODHbAsMIuUehEh2c23rx1h74CLGn3e2K7JdqjQECpr9uuCy(tCwB67wOqHIduP(KmVwAiHMh9axPjwo69MYXAZjCxDPLVXsRo3(V8b)7d
 -- FaceRoll Labels:         !WA:2!1rvqlYrru4zyoeOrYoozZIy8WA0SzLabsIjyGaXPh7XzxMSZMQ71nIh6Q6UQE6sRPQovv9MDYjzmibKqWfpKd50GGxepmKFaI3fBgZrpTKdEEXFaPQUhcAW9u)EV(RQ699vFVQE3wJAHBHF45LICnJYjYb7e0FJT8aXcMqUzVB(3p5j)ATA16DZxO1FDzWF90NAQuVr2fWuvgdnoGSVomrihH0HzHA6isiEmhnIghQtLevQGHhlhpijrr03y5ziECQqUTGY1rD82kWdKT6XVvvz1ZAgNR0Irwe7KHrAcGShHRpeLBQI004DPyDQBBtQefRPcU6AaLgj1oUuov7eLy(OsDMOL0Hdjs1jxtUi8BNIjr5jjbJZiYEE93U7o9D1MeakxIU8evgHX2aRCouLhvES(g009Nf2PTFqOFqBqGBU5qISKGiFfSTLedmG)2E97x4e1JGy6uGrBikNdY5loENS302X7rcQYVLat(5AzN94fLrcCO0ObWJmIirYrSpZqidN)PdqCQvoe8RvCYUfN2Ll4KFJGueFTKWhQtpXCSHuweHwkkvKybhRMyXyfGIZ5ocr5M1wCUI1orX5lwV4dmHnF9kUjcUEE3bGoEFYQ(3EN2aVPgIdidTI)BVsXPNBsJqXF1qJ9IJDzceo5WygsPcrCCOrwJxbmkNPPp8u)ZsqCtOUj8rWVh(NWFOj85lb)XMWN9fWN1e(nWxSe8XWLFF4VdFGP4sW)agPrmJgVsXLCYALRiH)3DofuMB)TB5jvgqVpXgmX27(MK3DUkfHf37ov2ZgtLLTVviC1gHxUF1p69Xt(oODsiBTJ)AHrgIIhhMWeczA27D8aZKKyQ9(Qr2z(FrvfaSGXtnwicU0E)G3yr7(5vD17ut(LMXcAYyayJpTxWuTiEVkNWBv)xw(Su8rDrXeGGXwTpkIWutUNqI3vIYMS7IGzjsJF04oqAuJJQgo7Alz1Gi)oapVTUCofp7U3EZnV(viF4hDL1JmwMe6qN5MPpd8bzLZBoZ(xCr6h440EG3SQgUt57j1RxVXuRDJUybuEftnzohOiSKQNfCheem4wTurx9Ix66x8QT27535L)
 -- FaceRoll Labels Bear:    !WA:2!1r1ZVnoru4eLdizwb7gvfHaouwKwoGuLOsBLw6clXPoKSkTPm29hCYDSNNJhy8mdZmUTHtOieAp3t7H9uUWfehYFbi(lWeXrovTh2Z9VGDM4ieGON87n(988999(EUz)2fTjTjp7JuIsdJYb14JIgn8GauQGjupDWtE1ZF(V1OrJbp5LgZpSk4VEXlSN0S1ccvlz4PrWLM5JgECGN3ED3pCPohtex81JZY0G59BSaZtZfQdfuUjPxWbrbi5M)JwJZeQcSjwgBOfW6SMY7MwQnIcxfhjjydGGZbU5ACP9uSHMEcLyY97Atv4udvW17G0gSY4LKr5uDUNV9HXBMrrNmbu636bQ1H)0CcKuMLfnvcQbbJoS)rJ8n2eeUuH3EMwcm2qI27ADzYQRn0wn9YfX96ggfhg1ff5xA)4josakehxaAVQ3mzaGzM8)UTdvGTnu4HbJgDvjF917jVNdXNdr157liWV0q(E)VIsDaYPnKBSsiO4y2Xw6yz8pFLgyz1kR)4OOX77Nj4ML9hJ6fS3MHF1rDrbZTGbbtCc072PQZsBAco9BNyN4CIptGjzxNYWADmMtITupTdQOKzOD(JZsmyMLgDQ2YdTQgxKSDPgI)3TK7VQr7B910VhCbZCqj0M8bRDeNw7iAnxTcnoX33y5Q8JVD3azQvAPPXMCfOZfmY0RWCQB(l47u929)DaRHqJc4tm5VrvhFUGdlj2PORIy3mvPHubNON5k1DPv76xGP8(vFQTHQDREC1Nv952N39)EI8dVDGjvqk1ndAjV)TxvHGeBHcC2CheORCPElTwy7cXyzDQ6BSgDA2ueA4xoiAUrKEE909DA(RBCFkrUrFCkGem2MJWjatVPpGvQP1Q5J3yrMY6(SAa2GBDt9YwF3roUMe2dfeCqI96ZOt82UKswqggL(OTL69d(o1L1FLbFXSDpZTMp7cHICIclNDY6Gf1dVER(DqZMnBn36ObYQTVF8olO8AgBXRN8b3UsWGj40PXzmHqL3wN8WT(KhT1dBF(FE6R)
 
@@ -54,14 +54,16 @@ local KEY_DELETE = hs.keycodes.map["delete"]
 local MODE_OFF = 0
 local MODE_SV = 1
 local MODE_MM = 2
-local MODE_ELE = 3
-local MODE_BM = 4
-local MODE_ON = 5
-local MODE_LAST = 5
+local MODE_OUT = 3
+local MODE_ELE = 4
+local MODE_BM = 5
+local MODE_ON = 6
+local MODE_LAST = 6
 
 local MODE_NAMES = {}
 MODE_NAMES[MODE_BM] = "BM"
 MODE_NAMES[MODE_ELE] = "Ele"
+MODE_NAMES[MODE_OUT] = "Out"
 MODE_NAMES[MODE_MM] = "MM"
 MODE_NAMES[MODE_OFF] = "Off"
 MODE_NAMES[MODE_ON] = "On"
@@ -513,6 +515,153 @@ local function nextElemental()
 end
 
 -----------------------------------------------------------------------------------------
+-- Outlaw
+
+local function nextOutlaw()
+    facerollNextActionIndex = facerollNextActionIndex + 1
+    if facerollNextActionIndex > 10 then
+        facerollNextActionIndex = 0
+    end
+    if facerollNextActionIndex > 1 then
+        -- Slow down!
+        return
+    end
+
+    local shouldkeepitrolling = bitand(facerollGameBits, 0x1)
+    local shouldrollthebones = bitand(facerollGameBits, 0x2)
+    local adrenalinerushbuff = bitand(facerollGameBits, 0x4)
+    local bladeflurry = bitand(facerollGameBits, 0x8)
+    local ruthlessprecision = bitand(facerollGameBits, 0x10)
+    local subterfuge = bitand(facerollGameBits, 0x20)
+    local stealth = bitand(facerollGameBits, 0x40)
+    local opportunity = bitand(facerollGameBits, 0x80)
+    local audacity = bitand(facerollGameBits, 0x100)
+    local keepitrollingcd = bitand(facerollGameBits, 0x200)
+    local adrenalinerushcd = bitand(facerollGameBits, 0x400)
+    local betweentheeyescd = bitand(facerollGameBits, 0x800)
+    local vanishcd = bitand(facerollGameBits, 0x1000)
+    local rollthebonescd = bitand(facerollGameBits, 0x2000)
+    local cp5 = bitand(facerollGameBits, 0x4000)
+    local cp6 = bitand(facerollGameBits, 0x8000)
+
+    if facerollAction == ACTION_Q then
+        -- Single Target
+
+        if facerollNextActionIndex == 0 then
+            sendKeyToWow("pad9") -- signal we're in ST
+
+        elseif shouldkeepitrolling > 0 and keepitrollingcd > 0 then
+            -- Keep It Rolling if you have any 4 active Roll the Bones buffs.
+            sendKeyToWow("f7") -- keep it rolling
+
+        elseif shouldrollthebones > 0 and rollthebonescd > 0 then
+            -- Roll the Bones if you have 2 or fewer buffs if neither consist of
+            -- Broadside, Ruthless Precision or True Bearing. Cast ONCE
+            -- immediately after using Keep It Rolling.
+            sendKeyToWow("pad8") -- roll the bones
+
+        elseif adrenalinerushcd > 0 and cp5 == 0 then
+            -- Adrenaline Rush on cooldown at 2 or fewer combo points.
+            sendKeyToWow("pad7") -- adrenaline rush
+
+        elseif stealth == 0 and subterfuge == 0 and vanishcd > 0 and cp6 > 0 and adrenalinerushbuff > 0 then
+            -- Vanish followed by Between the Eyes at 6 or more combo points
+            -- while Adrenaline Rush is active AND ANY 1 of the following
+            -- conditions is met. Adrenaline Rush has 3 or less seconds
+            -- remaining. Vanish has 15 seconds remaining on overcapping.
+            -- Between the Eyes is on cooldown AND  Ruthless Precision is
+            -- active.
+            sendKeyToWow("=") -- vanish
+
+        elseif betweentheeyescd > 0 and (cp6 > 0 or (cp5 > 0 and subterfuge > 0)) then
+            -- Between the Eyes if buff duration is 4 or less seconds, or you
+            -- have Ruthless Precision buff active at 6 or more combo points.
+            -- During Subterfuge finish at 5 or more as your only finisher.
+            sendKeyToWow("-") -- between the eyes
+
+        elseif cp6 > 0 then
+            -- Dispatch if at 6 or more combo points.
+            sendKeyToWow("8") -- dispatch
+
+        elseif cp5 == 0 and (audacity > 0 or subterfuge > 0) then
+            -- Ambush if you have Audacity, or are in Subterfuge at 4 or less
+            -- combo points.
+            sendKeyToWow("9") -- ambush
+
+        elseif opportunity > 0 and cp5 == 0 then
+            --  Pistol Shot if you have Opportunity at 3 or less combo points.
+            --  With Broadside active, only cast at 1 or less combo points.
+            sendKeyToWow("0") -- pistol shot
+
+        elseif cp6 == 0 then
+            -- Sinister Strike at 5 or less combo points.
+            sendKeyToWow("7") -- sinister strike
+
+        end
+
+    elseif facerollAction == ACTION_E then
+        -- AOE
+
+        if facerollNextActionIndex == 0 then
+            sendKeyToWow("pad6") -- signal we're in AOE
+
+        elseif bladeflurry > 0 then
+            -- Blade Flurry if there are 2 or more targets in range, and is not
+            -- already active.
+            sendKeyToWow("f8") -- blade flurry
+
+        elseif shouldkeepitrolling > 0 and keepitrollingcd > 0 then
+            -- Keep It Rolling if you have any 4 active Roll the Bones buffs.
+            sendKeyToWow("f7") -- keep it rolling
+
+        elseif shouldrollthebones > 0 and rollthebonescd > 0 then
+            -- Roll the Bones if you have 2 or fewer buffs if neither consist of
+            -- Broadside, Ruthless Precision or True Bearing. Cast ONCE
+            -- immediately after using Keep It Rolling.
+            sendKeyToWow("pad8") -- roll the bones
+
+        elseif adrenalinerushcd > 0 and cp5 == 0 then
+            -- Adrenaline Rush on cooldown at 2 or fewer combo points.
+            sendKeyToWow("pad7") -- adrenaline rush
+
+        elseif stealth == 0 and subterfuge == 0 and vanishcd > 0 and cp6 > 0 and adrenalinerushbuff > 0 then
+            -- Vanish followed by Between the Eyes at 6 or more combo points
+            -- while Adrenaline Rush is active AND ANY 1 of the following
+            -- conditions is met. Adrenaline Rush has 3 or less seconds
+            -- remaining. Vanish has 15 seconds remaining on overcapping.
+            -- Between the Eyes is on cooldown AND  Ruthless Precision is
+            -- active.
+            sendKeyToWow("=") -- vanish
+
+        elseif betweentheeyescd > 0 and (cp6 > 0 or (cp5 > 0 and subterfuge > 0)) then
+            -- Between the Eyes if buff duration is 4 or less seconds, or you
+            -- have Ruthless Precision buff active at 6 or more combo points.
+            -- During Subterfuge finish at 5 or more as your only finisher.
+            sendKeyToWow("-") -- between the eyes
+
+        elseif cp6 > 0 then
+            -- Dispatch if at 6 or more combo points.
+            sendKeyToWow("8") -- dispatch
+
+        elseif cp5 == 0 and (audacity > 0 or subterfuge > 0) then
+            -- Ambush if you have Audacity, or are in Subterfuge at 4 or less
+            -- combo points.
+            sendKeyToWow("9") -- ambush
+
+        elseif opportunity > 0 and cp5 == 0 then
+            --  Pistol Shot if you have Opportunity at 3 or less combo points.
+            --  With Broadside active, only cast at 1 or less combo points.
+            sendKeyToWow("0") -- pistol shot
+
+        elseif cp6 == 0 then
+            -- Sinister Strike at 5 or less combo points.
+            sendKeyToWow("7") -- sinister strike
+
+        end
+    end
+end
+
+-----------------------------------------------------------------------------------------
 -- The heart of action ticks
 
 local wowTick = hs.timer.new(0.02, function()
@@ -525,6 +674,8 @@ local wowTick = hs.timer.new(0.02, function()
     or facerollMode == MODE_BM
     then
         nextAction(ACTIONS[facerollMode][facerollAction])
+    elseif facerollMode == MODE_OUT then
+        nextOutlaw()
     elseif facerollMode == MODE_MM then
         nextMM()
     elseif facerollMode == MODE_ELE then
