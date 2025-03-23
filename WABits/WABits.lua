@@ -401,9 +401,11 @@ local function onPlayerAura(info)
     if info.updatedAuraInstanceIDs then
 		for _, v in pairs(info.updatedAuraInstanceIDs) do
 			local aura = C_UnitAuras.GetAuraDataByAuraInstanceID("player", v)
-            for _, buff in pairs(buffs) do
-                if aura.name == buff.name and buff.rtb and aura.duration > 10 then
-                    buff.id = aura.auraInstanceID
+            if aura ~= nil then
+                for _, buff in pairs(buffs) do
+                    if aura.name == buff.name and buff.rtb and aura.duration > 10 then
+                        buff.id = aura.auraInstanceID
+                    end
                 end
             end
         end
