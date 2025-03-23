@@ -89,19 +89,19 @@ local buffs = {
     },
     ["rtb2"] = {
         ["id"]=0,
-        ["name"]="Ruthless Precision",
+        ["name"]="True Bearing",
         ["remain"]=false,
         ["cto"]=false,
     },
     ["rtb3"] = {
         ["id"]=0,
-        ["name"]="True Bearing",
+        ["name"]="Ruthless Precision",
         ["remain"]=false,
         ["cto"]=false,
     },
     ["rtb4"] = {
         ["id"]=0,
-        ["name"]="Grand Melee",
+        ["name"]="Skull and Crossbones",
         ["remain"]=false,
         ["cto"]=false,
     },
@@ -113,7 +113,7 @@ local buffs = {
     },
     ["rtb6"] = {
         ["id"]=0,
-        ["name"]="Skull and Crossbones",
+        ["name"]="Grand Melee",
         ["remain"]=false,
         ["cto"]=false,
     },
@@ -122,7 +122,7 @@ local buffs = {
 local rtbStart = 0
 local rtbEnd = 0
 local rtbDelay = 0.1
-local rtbNeeds = false
+local rtbNeedsAPressAfterKIR = false
 
 local function setOverlayText(text)
     if debugOverlayEnabled and debugOverlayText ~= nil then
@@ -279,7 +279,7 @@ local function calcBitsOutlaw()
     if kirCount >= 4 then
         bits = bits + 0x1
     end
-    if rtbCount <= 2 and goodRtbCount == 0 or rtbNeeds then
+    if rtbCount <= 2 and goodRtbCount == 0 or rtbNeedsAPressAfterKIR then
         bits = bits + 0x2
     end
 
@@ -345,7 +345,7 @@ local function calcBitsOutlaw()
         o = o .. "\n"
         o = o .. "rtbCount: " .. rtbCount .. "\n"
         o = o .. "kirCount: " .. kirCount .. "\n"
-        o = o .. "rtbNeeds: " .. bt(rtbNeeds) .. "\n"
+        o = o .. "rtbNeeds: " .. bt(rtbNeedsAPressAfterKIR) .. "\n"
         o = o .. "\n"
         o = o .. "rtb1: remain: " .. bt(buffs.rtb1.remain) .. " cto: " .. bt(buffs.rtb1.cto) .. "  [" .. buffs.rtb1.id .. "]\n"
         o = o .. "rtb2: remain: " .. bt(buffs.rtb2.remain) .. " cto: " .. bt(buffs.rtb2.cto) .. "  [" .. buffs.rtb2.id .. "]\n"
@@ -376,6 +376,15 @@ local function hideBits()
     background:Hide()
     for bitIndex = 0,15 do
         cells[bitIndex]:Hide()
+    end
+end
+
+local function resetEverything()
+    print("WABits: resetEverything()")
+    for _, buff in pairs(buffs) do
+        buff.id = 0
+        buff.remain = false
+        buff.cto = false
     end
 end
 
@@ -514,6 +523,7 @@ local function onevent(self, event, arg1, arg2, ...)
         f:UnregisterEvent("PLAYER_LOGIN")
         init()
     elseif event == "PLAYER_ENTERING_WORLD" then
+        resetEverything()
     elseif event == "UNIT_SPELLCAST_SUCCEEDED" then
         updateBits()
     elseif event == "UNIT_AURA" then
@@ -527,12 +537,12 @@ local function onevent(self, event, arg1, arg2, ...)
             if spell_id == 381989 then -- keep it rolling
                 if sub_event == "SPELL_CAST_SUCCESS" then
                     -- print("Keep it rolling! - " .. sub_event)
-                    rtbNeeds = true
+                    rtbNeedsAPressAfterKIR = true
                 end
             elseif spell_id == 315508 then -- roll the bones
                 if sub_event == "SPELL_CAST_SUCCESS" then
                     -- print("Roll the bones! - " .. sub_event)
-                    rtbNeeds = false
+                    rtbNeedsAPressAfterKIR = false
                 elseif sub_event == "SPELL_AURA_APPLIED" then
                     rtbStart = GetTime()
                     rtbEnd = rtbStart + 30
