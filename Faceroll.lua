@@ -3,7 +3,7 @@
 
 -- WAs:
 -- FaceRoll:                !WA:2!DA1ZVnoru4gvKwrufnKTSQc4WqyPIvGIwQ0UQCOAvC(bTqsDX2D7UId2J9mozaNzSMzC3eogXbUShOA)licjUG4q2Y1vO9osMQvCgv4mhwH4mJTtlUSTePyPO8EJ)MV5nFVNN3uOv5(LrLrF9n4SizaHI567z1E7DAEmms2JX1dLegvuCcIicdGdTWdKvEhVXErcjRFIx4n9JOEjOE3BueOE4yzeNcQ0YaubuTkagXH2y6bv7Zq4Iyk6yrpiI9G7R77lWY3CHjqQNAP2LrOsxnDll9oHGCRNTpJ3hkTdTLK(4PEfcl9VXWEHiOeBGpatLNOcCMcaXBFcs2tRMYLdtdqXTnesixwuJqjY1oeXSZ4WXn7)WvoxWc2euPJEfxFfCrVIJKCs3UyU4vwJp18x1KddXXx9erKB6QBg57tgmXUEntlBtRAgwJqkktw91Vz1nIx6P17bLGoyHa2fF202LJvtZWC3MTBpjlwS7rqyJKDmAKieheSnsum(QdEPF8m9oDQVpaY7MP8eFq6qGnvbUAXT2ZScGXZnO(UwBRVJAuzpmnDoQ8r6)VibTQvVPHE7221AMdFYZliskeN9YPPFjpcFUf4I520AwCRqmNCVtRzXTcXCYT(oZIBfI5KBnTzXTcXCYDdZzXTcXCYDNzYDN5M79NzDY(ZDDsTzwNuBURt2QXS4wHyEZL1MTINIzo5V923DMF5NI5)L)KFQNSZ5eHpk3XkGChdaY9zli3NzGCFwaYvgdYv2bYvMaa5YRGC5bW50nW52LNEKB6H5lzqH9XIIArQMeUjnHW8XiSR6KDl175B1S9UT2R9Hr0Pnbkg(Qj9xoaBL53rPnF)cHvU8wyk1Zw1ua7eU2Ldka3f6n02pGX49ouGd8t7qg)YA(mQ84w6g1B2ay(P7vZO5yvJedC3KECV(1Ix9yLRl07l6Q6QtrAbmiY)eVaOqydPiBv7eV1CfeA3a8dn6hfij)9rFMZrl7Gk58qNFX5zl7CujNvUUZFTSZFSSZp78noxVKZJk5il54kHbQm51I3Oyy5ib2(882Zi1p51Aj(zgKVeNymkjYnvoBo9oa3l7oalYhKzuympDxKi0AsLMCiKs6N2(82XLAfVQgLrXpfdfytjht7k7DLJpTbBA6JlWEmksmkbtcnXn06dju1CJBe38kXTI)O4TuMV2)DKNRexmNcdURIefDFx4BF5jNqo2JKGAXXQg3yu6Dn(QLcFJlCkzgXVLHhlGX)4TUZF(KN8BlSWclU1D(9h)4FkXI)5QsqI)qT2nBznwY8oilkwTWpSsfcAulOh2GfeSEebnX8(B8j641FaFWGj(Cv1QsmGs4Ipp7MuTsgkzV7Aw3OzZD4dZu3VDzxL24t6wm89U8TgAOQ(N4zl7XXIESa0WrpGXr7ZHHJ2FQXKS0x90TtHcfwCCIOtMExrcnJrLxXlur8ovrAuw4ERQFWhw9wLp4z37Fc
--- FaceRoll Enable/Disable: !WA:2!fwvqVXrTx8SApG0iKY2OO0s(JeJgAJA)3sijLwkcvjYKSRsk7MnA2nTffkZ4zSNDCZS2w2EsYcIlrvOEPhiIpb7fUG4WQ(baXDKgI6rovXNGk(aWZZKMswsewAx73BE)E(5N)9EUsJP6pfEk8t))sEMoLYiY2B1T56Bu3lINYL3RkmexhtvIu0GUK91(XCzFK2x4RP9j(4bmuFAKVorsuj8u8GHrzknVVXwXhhNXI0uo7QxZYggsIotYSrzsKpHT7895yIA7tj(ilcdFKkbH579fTJJve97oXielkHl3Ktz6WvQVr36Ec7ZpOkLQiQ9MqzlbgPjHzftVeLbQrAA0dOyDI7YGOeveOQB7P0iP2kmMYOQelxysp3HyUFPZcclN3VYvojUJLRysw231(KZRg2ZByxKdp1r35lxCPpkko2XE(5l)SzHXAZCXxLoMuGL1PZsGZ)MVDmDBVWJa1Jhgx1PDJgo3W25MfdNRnoQfphuByaHGXcl8VbT0zdYTvjO7CNcqNgfGyHd0sAVEeP6RMtE8YVBigUjIJ7oqqKRvV5Mn2QPRge8mOx6aLGKMUowz9svwizxct3bSMU)i)vwUtx)oDx2RRBgCTeAU)jspGcsuwEfMgUgbLQtob6Msca1RZM1B28Wm2XHG1C5xC38zZNU0iL4MnwEL6ETB20V(gl72SU9yY(UTEJQvxVJr3OsMGVj0ZDYFVC78lL)o5tl(JtObfEVKaqJlLSV7DTDgZ7oxZwNqyf2zgJNfpT81Tx8elpMwPLzKcDKuf5S3PJd6)RTAHZ31aPe(96tDcft8mLB485SgbfJpU4qVlzjeBG4cOI1Dlt3TaF)tti(FNzjB5I8Bmmtr6Y5PAQi5qfjnUSC3TD3UTB5gZzArTgujYUfNXTBrW0S(dHRzpsptH7SZKp7rGyikANEq3mg2nLJWXVmkfPu(ig2hiwrZfQOSEPKN51pd2QNw75Bh88jdW1cEwWVh8IjdEsTGNxlqxl4VMm4hQf8BbFFWLRf8Ntgm9Ldc1OuiXot(NA5v4wZkXuqG7F6DjX18V5RUk6xtmloWCc6acFWXD3Eyz3TQHrCwmT3mUrjiDYqzXXXuB4AAlCiIrnTQ4SBNxRXVsqkshTKW6PtER8zDzCg5imChASOGjkveWHy1bgtnUjFD3(ikRr(AaG81ZVx(NN3eMVW4AEfKUjsgk9(Gta39JdnoIw0w0s8(NF)wHKerniQo6FyKZvIeZD(Gsj9qrd8Jt5CzIC)YKXA)Iy7QF2etur(yGLrJham2gDhQ5r7wgtxQYppTdflUydueXJNMAxNHctjF4QuLzwo41oAWw3FcymkwcDhGugsJQ(QY3rAyuzsnHDwXRE9neoNFycLf(awsWszu8Ow1jKBVtxsJRkoypUe)ajsCWdoEXrWZkG3BlkYyZc9xc18EaxBPDidYx1BpZJnvLysmcOEjUM2whTPeY62AU9kWTVeysRsurbUql3iXmLFe4fSEWlaGrgkY8Jk5pfDGVxLkvQoe6WrWfVL9K3EeLvEcGGW6ml5IEDj36tPcV18l(jZFRP29fp8V)d
+-- FaceRoll Enable/Disable: !WA:2!fwvZUTTXtClOdbGOaw1j1j1TaLqn1iPj1v2k(JCiaX0HcjbswguYjPWn)jxYDP4MqTlXUlDSArVyeuKl5qn6tGU0lf9GqEakkqpwawJC8)PG(ee0hGolPItTJm6cqWzMD(nZS78XwQXm9Nbpd(zFUGNQIPmIO92DBENnTf71omusu3(xt2P8nNAQsJWuzsmAqxYEQQFwWWGuPI3xZLSAyklqr5SlDzdtyjiQubZeLkqUe2Ul0NJjYDog7dnim8HYieM)KVQWtF8uJqSGiUyloLP83WEZU2ojM)l36gYf9rk3exfTpzmxPKkVnu2obJue)08FVcLcIrkAW9PyvK16aRaLhOYvCKkKqzyrzu18hG5UfgXZV4)EL(9JI3qXg8yUW8gMhDovGVUQzGw8XoYv)6fx6AbHHvnxyHIT1eAT1)Z3vuvF0nmo(Tdy8V97oHSDQ9qq8jdJlvTDJgvVQz165RQx(KOwCYO6CVcqRU6KaT0Kb1QLg0ARHq1Q9UGQpzq2nT1OQvRE9RF93f11MmkRCxHqRT2KC1YNYvXMfGghFhhfGOMFiKGLrg7Re0E9ic5)BEXyYVFigQucd7oiHiUTDZTASDtlfW4OTYs7ltiXX3blnELm1NSlHP6aAt3BK7gR3PRBNUR701kfkF811NeHdd1NinCYv1)2euSk6iOBjiauNoBz3S5bPSXHGX8zNF3S5YoBHsYK6nwFdBN2nB6AV56wnTnpbVRvR3k6w3PJw2OIkwxDONv9nCrumXr3MGZoBY))Oc3C)uuYsdl4mVXnmREc)u9YMQiclxp96K3RhN)kMlEKMJBeuIusUmsSKmzpno8)VCvTt30qBe8LDHSpm7tYmZM3qpJ6r5h1DjlHydsEFuoD3IR7wGf)5Ps(OjosPGi7kjZF6tCIj9qbdCdJ5Cr0bigvpDHZwjRsJS5SyCg53iijPJsqy9urN5qmCy0AKNCessaNHL7R1rx1Lv3QpIYaSz1ZU2zYwoBLSvbYp4KsSc5mvsLgubYSfNXnBrW00(dHQlhsp98S5MnBUdbwFuWJ7bZYzyRyoch(QGyKu6IyyxOEoyEFjL1lM8CN(PXk6ZQ8ID8EX0E4kEp37p9E50EVOI35UO3FnT3FpT3pwX7p8(bVlwXtvX7Pv88vOyiloB2nnsMjvsCpUTJCY51BBP5liOFdrtSV(e0by(IXd9FqXq)YlLsXJAztiR84UKgxkzOi)aPVES0ZnhcoQlNdbBs0bssCyXRdwT72TDRHqpfbNpD)PVxYNE6jUebjGkb7w(1aAIGHIVhKpab)uYvoDy4bqpnnWvfjiYiEmEGt(q97wgwIhbDA0WbqnCJUdv8GDlS4fk9lNRkfNC(gOaIdpo20MH8JjF5TOs9)9FcxGVVaLS)9htmkuaJoGQgKcv(1fpc2qlsFl43zdhB7ntQE6Hj0P4cyjWJxCwiT3SwbriiMh8MNWhS99McwhcpicMUDs(tGZbtE8v8Eq5WspMmiZ1cg0gKm7wc4kYeSaRh8UKIRjvliG8WTG99S0J5oSqjyZnGnfysicQNICEIovuEurkoFg9DlvQu5H66EAUxngrzfrpWzmXEXG30lwFgP)YlS41xy5z29Lp4F(d
 -- FaceRoll Labels:         !WA:2!1rvqlYrru4zyoeOrYoozZIy8WA0SzLabsIjyGaXPh7XzxMSZMQ71nIh6Q6UQE6sRPQovv9MDYjzmibKqWfpKd50GGxepmKFaI3fBgZrpTKdEEXFaPQUhcAW9u)EV(RQ699vFVQE3wJAHBHF45LICnJYjYb7e0FJT8aXcMqUzVB(3p5j)ATA16DZxO1FDzWF90NAQuVr2fWuvgdnoGSVomrihH0HzHA6isiEmhnIghQtLevQGHhlhpijrr03y5ziECQqUTGY1rD82kWdKT6XVvvz1ZAgNR0Irwe7KHrAcGShHRpeLBQI004DPyDQBBtQefRPcU6AaLgj1oUuov7eLy(OsDMOL0Hdjs1jxtUi8BNIjr5jjbJZiYEE93U7o9D1MeakxIU8evgHX2aRCouLhvES(g009Nf2PTFqOFqBqGBU5qISKGiFfSTLedmG)2E97x4e1JGy6uGrBikNdY5loENS302X7rcQYVLat(5AzN94fLrcCO0ObWJmIirYrSpZqidN)PdqCQvoe8RvCYUfN2Ll4KFJGueFTKWhQtpXCSHuweHwkkvKybhRMyXyfGIZ5ocr5M1wCUI1orX5lwV4dmHnF9kUjcUEE3bGoEFYQ(3EN2aVPgIdidTI)BVsXPNBsJqXF1qJ9IJDzceo5WygsPcrCCOrwJxbmkNPPp8u)ZsqCtOUj8rWVh(NWFOj85lb)XMWN9fWN1e(nWxSe8XWLFF4VdFGP4sW)agPrmJgVsXLCYALRiH)3DofuMB)TB5jvgqVpXgmX27(MK3DUkfHf37ov2ZgtLLTVviC1gHxUF1p69Xt(oODsiBTJ)AHrgIIhhMWeczA27D8aZKKyQ9(Qr2z(FrvfaSGXtnwicU0E)G3yr7(5vD17ut(LMXcAYyayJpTxWuTiEVkNWBv)xw(Su8rDrXeGGXwTpkIWutUNqI3vIYMS7IGzjsJF04oqAuJJQgo7Alz1Gi)oapVTUCofp7U3EZnV(viF4hDL1JmwMe6qN5MPpd8bzLZBoZ(xCr6h440EG3SQgUt57j1RxVXuRDJUybuEftnzohOiSKQNfCheem4wTurx9Ix66x8QT27535L)
 -- FaceRoll Labels Bear:    !WA:2!1r1ZVnoru4eLdizwb7gvfHaouwKwoGuLOsBLw6clXPoKSkTPm29hCYDSNNJhy8mdZmUTHtOieAp3t7H9uUWfehYFbi(lWeXrovTh2Z9VGDM4ieGON87n(988999(EUz)2fTjTjp7JuIsdJYb14JIgn8GauQGjupDWtE1ZF(V1OrJbp5LgZpSk4VEXlSN0S1ccvlz4PrWLM5JgECGN3ED3pCPohtex81JZY0G59BSaZtZfQdfuUjPxWbrbi5M)JwJZeQcSjwgBOfW6SMY7MwQnIcxfhjjydGGZbU5ACP9uSHMEcLyY97Atv4udvW17G0gSY4LKr5uDUNV9HXBMrrNmbu636bQ1H)0CcKuMLfnvcQbbJoS)rJ8n2eeUuH3EMwcm2qI27ADzYQRn0wn9YfX96ggfhg1ff5xA)4josakehxaAVQ3mzaGzM8)UTdvGTnu4HbJgDvjF917jVNdXNdr157liWV0q(E)VIsDaYPnKBSsiO4y2Xw6yz8pFLgyz1kR)4OOX77Nj4ML9hJ6fS3MHF1rDrbZTGbbtCc072PQZsBAco9BNyN4CIptGjzxNYWADmMtITupTdQOKzOD(JZsmyMLgDQ2YdTQgxKSDPgI)3TK7VQr7B910VhCbZCqj0M8bRDeNw7iAnxTcnoX33y5Q8JVD3azQvAPPXMCfOZfmY0RWCQB(l47u929)DaRHqJc4tm5VrvhFUGdlj2PORIy3mvPHubNON5k1DPv76xGP8(vFQTHQDREC1Nv952N39)EI8dVDGjvqk1ndAjV)TxvHGeBHcC2CheORCPElTwy7cXyzDQ6BSgDA2ueA4xoiAUrKEE909DA(RBCFkrUrFCkGem2MJWjatVPpGvQP1Q5J3yrMY6(SAa2GBDt9YwF3roUMe2dfeCqI96ZOt82UKswqggL(OTL69d(o1L1FLbFXSDpZTMp7cHICIclNDY6Gf1dVER(DqZMnBn36ObYQTVF8olO8AgBXRN8b3UsWGj40PXzmHqL3wN8WT(KhT1dBF(FE6R)
 
@@ -52,18 +52,20 @@ local KEY_ENTER = hs.keycodes.map["return"]
 local KEY_DELETE = hs.keycodes.map["delete"]
 
 local MODE_OFF = 0
-local MODE_ON = 1
-local MODE_BM = 2
-local MODE_MM = 3
-local MODE_ELE = 4
-local MODE_LAST = 4
+local MODE_SV = 1
+local MODE_MM = 2
+local MODE_ELE = 3
+local MODE_BM = 4
+local MODE_ON = 5
+local MODE_LAST = 5
 
 local MODE_NAMES = {}
+MODE_NAMES[MODE_BM] = "BM"
+MODE_NAMES[MODE_ELE] = "Ele"
+MODE_NAMES[MODE_MM] = "MM"
 MODE_NAMES[MODE_OFF] = "Off"
 MODE_NAMES[MODE_ON] = "On"
-MODE_NAMES[MODE_BM] = "BM"
-MODE_NAMES[MODE_MM] = "MM"
-MODE_NAMES[MODE_ELE] = "Ele"
+MODE_NAMES[MODE_SV] = "SV"
 
 local ACTION_NONE = 0
 local ACTION_Q = 1
@@ -313,6 +315,144 @@ local function nextMM()
     end
 end
 
+-----------------------------------------------------------------------------------------
+-- Survival
+
+local function nextSV()
+    facerollNextActionIndex = facerollNextActionIndex + 1
+    if facerollNextActionIndex > 10 then
+        facerollNextActionIndex = 0
+    end
+    if facerollNextActionIndex > 1 then
+        -- Slow down!
+        return
+    end
+
+    local lunarstorm = bitand(facerollGameBits, 0x1)
+    local strikeitrich = bitand(facerollGameBits, 0x2)
+    local tipofthespear = bitand(facerollGameBits, 0x4)
+    local wildfirebomb2 = bitand(facerollGameBits, 0x8)
+    local wildfirebomb1 = bitand(facerollGameBits, 0x10)
+    local butchery = bitand(facerollGameBits, 0x20)
+    local killcommand = bitand(facerollGameBits, 0x40)
+    local explosiveshot = bitand(facerollGameBits, 0x80)
+    local killshot = bitand(facerollGameBits, 0x100)
+    local furyoftheeagle = bitand(facerollGameBits, 0x200)
+    local highfocus = bitand(facerollGameBits, 0x400)
+
+    if facerollAction == ACTION_Q then
+        -- Single Target
+
+        if facerollNextActionIndex == 0 then
+            sendKeyToWow("pad9") -- signal we're in ST
+
+        elseif lunarstorm > 0 then
+            -- Cast Wildfire Bomb to trigger Lunar Storm whenever it is not on
+            -- cooldown, regardless of Tip of the Spear.
+            sendKeyToWow("7") -- wildfire bomb
+
+        elseif strikeitrich > 0 and tipofthespear == 0 then
+            -- Cast Raptor Strike (or Mongoose Bite) with Tip of the Spear to
+            -- consume Strike it Rich. If you do not have Tip of the Spear, you
+            -- can use Kill Command without regard for focus to bruteforce
+            -- getting one quick. This is virtually equal DPS but can be useful
+            -- when bursting down a priority target.
+            sendKeyToWow("8") -- kill command
+
+        elseif strikeitrich > 0 and tipofthespear == 1 then
+            -- Cast Raptor Strike (or Mongoose Bite) with Tip of the Spear to
+            -- consume Strike it Rich.
+            sendKeyToWow("9") -- raptor strike
+
+        elseif wildfirebomb2 > 0 then
+            -- Cast Wildfire Bomb with or without Tip of the Spear if you have 2
+            -- charges of Wildfire Bomb, or if you are about to use Coordinated
+            -- Assault.
+            sendKeyToWow("7") -- wildfire bomb
+
+        elseif wildfirebomb1 > 0 and tipofthespear > 0 then
+            -- Cast Wildfire Bomb with Tip of the Spear if you have ~1.7+
+            -- charges of Wildfire Bomb.
+            sendKeyToWow("7") -- wildfire bomb
+
+        elseif butchery > 0 then
+            -- Cast Butchery to apply Merciless Blow.
+            sendKeyToWow("0") -- butchery
+
+        elseif furyoftheeagle > 0 and tipofthespear > 0 then
+            -- Cast Fury of the Eagle if you have a Tip of the Spear stack to
+            -- spend, and you won't need Fury of the Eagle for AoE in the near
+            -- future.
+            sendKeyToWow("-") -- fury of the eagle
+
+        elseif killcommand > 0 and highfocus == 0 then
+            -- Cast Kill Command if you will not over-cap the Focus it
+            -- generates.
+            sendKeyToWow("8") -- kill command
+
+        elseif wildfirebomb1 > 0 and tipofthespear > 0 then
+            -- Cast Wildfire Bomb if you have a Tip of the Spear stack to spend,
+            -- and if you will have at least 1 charge left by the time the
+            -- cooldown of Lunar Storm ends.
+            sendKeyToWow("7") -- wildfire bomb
+
+        elseif killshot > 0 then
+            -- Cast Kill Shot.
+            sendKeyToWow("=") -- kill shot
+
+        elseif explosiveshot > 0 then
+            -- Cast Explosive Shot.
+            sendKeyToWow("pad7") -- explosive shot
+
+        else
+            -- Cast Raptor Strike(or Mongoose Bite).
+            sendKeyToWow("9") -- raptor strike
+        end
+
+    elseif facerollAction == ACTION_E then
+        -- AOE
+
+        if facerollNextActionIndex == 0 then
+            sendKeyToWow("pad6") -- signal we're in AOE
+
+        elseif (lunarstorm > 0 and wildfirebomb1 > 0) or wildfirebomb2 > 0 then
+            -- Cast Wildfire Bomb Under any of the following cirumstances:
+            -- - To trigger Lunar Storm whenever it is not on cooldown.
+            -- - If you have 2 charges of Wildfire Bomb.
+            sendKeyToWow("7") -- wildfire bomb
+
+        elseif strikeitrich > 0 then
+            -- Cast Raptor Strike to consume Strike it Rich.
+            sendKeyToWow("9") -- raptor strike
+
+        elseif butchery > 0 then
+            -- Cast Butchery.
+            sendKeyToWow("0") -- butchery
+
+        elseif furyoftheeagle > 0 and tipofthespear > 0 then
+            -- Cast Fury of the Eagle if you have a Tip of the Spear stack to
+            -- spend.
+            sendKeyToWow("-") -- fury of the eagle
+
+        elseif killcommand > 0 and highfocus == 0 then
+            -- Cast Kill Command if you will not over-cap the Focus it
+            -- generates.
+            sendKeyToWow("8") -- kill command
+
+        elseif explosiveshot > 0 then
+            -- Cast Explosive Shot.
+            sendKeyToWow("pad7") -- explosive shot
+
+        elseif wildfirebomb1 > 0 and tipofthespear > 0 then
+            -- Cast Wildfire Bomb if you have a Tip of the Spear stack to spend.
+            sendKeyToWow("7") -- wildfire bomb
+
+        else
+            -- Cast Raptor Strike(or Mongoose Bite).
+            sendKeyToWow("9") -- raptor strike
+        end
+    end
+end
 
 -----------------------------------------------------------------------------------------
 -- Elemental
@@ -389,6 +529,8 @@ local wowTick = hs.timer.new(0.02, function()
         nextMM()
     elseif facerollMode == MODE_ELE then
         nextElemental()
+    elseif facerollMode == MODE_SV then
+        nextSV()
     end
 
     return

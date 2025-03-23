@@ -25,6 +25,19 @@ local buffs = {
         ["id"]=0,
         ["name"]="Tempest",
     },
+    ["lunarstorm"] = {
+        ["id"]=0,
+        ["name"]="Lunar Storm",
+        ["harmful"]=true,
+    },
+    ["strikeitrich"] = {
+        ["id"]=0,
+        ["name"]="Strike it Rich",
+    },
+    ["tipofthespear"] = {
+        ["id"]=0,
+        ["name"]="Tip of the Spear",
+    },
 }
 
 local function calcBitsMarksmanship()
@@ -62,6 +75,44 @@ local function calcBitsMarksmanship()
     return bits
 end
 
+local function calcBitsSurvival()
+    local bits = 0
+    if buffs.lunarstorm.id == 0 then
+        bits = bits + 0x1
+    end
+    if buffs.strikeitrich.id ~= 0 then
+        bits = bits + 0x2
+    end
+    if buffs.tipofthespear.id ~= 0 then
+        bits = bits + 0x4
+    end
+    if C_Spell.GetSpellCharges("Wildfire Bomb").currentCharges >= 2 then
+        bits = bits + 0x8
+    end
+    if C_Spell.GetSpellCharges("Wildfire Bomb").currentCharges >= 1 then
+        bits = bits + 0x10
+    end
+    if C_Spell.GetSpellCooldown("Butchery").duration < 1.5 then
+        bits = bits + 0x20
+    end
+    if C_Spell.GetSpellCooldown("Kill Command").duration < 1.5 then
+        bits = bits + 0x40
+    end
+    if C_Spell.GetSpellCooldown("Explosive Shot").duration < 1.5 then
+        bits = bits + 0x80
+    end
+    if C_Spell.IsSpellUsable("Kill Shot") and C_Spell.GetSpellCooldown("Kill Shot").duration < 1.5 then
+        bits = bits + 0x100
+    end
+    if C_Spell.GetSpellCooldown("Fury of the Eagle").duration < 1.5 then
+        bits = bits + 0x200
+    end
+    if UnitPower("player") > 85 then
+        bits = bits + 0x400
+    end
+    return bits
+end
+
 local function calcBitsElemental()
     local bits = 0
     if buffs.tempest.id ~= 0 then
@@ -83,41 +134,38 @@ local function calcBitsElemental()
     return bits
 end
 
+local function showBits(bits)
+    background:Show()
+    local b = 1
+    for bitIndex = 0,15 do
+        if bit.band(bits, b)==0 then
+            cells[bitIndex]:Hide()
+        else
+            cells[bitIndex]:Show()
+        end
+        b = b * 2
+    end
+end
+
+local function hideBits()
+    background:Hide()
+    for bitIndex = 0,15 do
+        cells[bitIndex]:Hide()
+    end
+end
+
 local function updateBits()
     local _, playerClass = UnitClass("player")
     local spec = GetSpecialization()
 
     if (playerClass == "HUNTER") and (spec == 2) then
-        local bits = calcBitsMarksmanship()
-        background:Show()
-
-        local b = 1
-        for bitIndex = 0,15 do
-            if bit.band(bits, b)==0 then
-                cells[bitIndex]:Hide()
-            else
-                cells[bitIndex]:Show()
-            end
-            b = b * 2
-        end
+        showBits(calcBitsMarksmanship())
+    elseif (playerClass == "HUNTER") and (spec == 3) then
+        showBits(calcBitsSurvival())
     elseif (playerClass == "SHAMAN") and (spec == 1) then
-        local bits = calcBitsElemental()
-        background:Show()
-
-        local b = 1
-        for bitIndex = 0,15 do
-            if bit.band(bits, b)==0 then
-                cells[bitIndex]:Hide()
-            else
-                cells[bitIndex]:Show()
-            end
-            b = b * 2
-        end
+        showBits(calcBitsElemental())
     else
-        background:Hide()
-        for bitIndex = 0,15 do
-            cells[bitIndex]:Hide()
-        end
+        hideBits()
     end
 end
 
@@ -126,8 +174,14 @@ local function onPlayerAura(info)
         for _, aura in pairs(info.addedAuras) do
             for _, buff in pairs(buffs) do
                 if aura.name == buff.name then
-                    -- print("Detected: " .. buff.name)
-                    buff.id = aura.auraInstanceID
+                    print("Detected: " .. buff.name)
+                    if buff.harmful then
+                        if aura.isHarmful then
+                            buff.id = aura.auraInstanceID
+                        end
+                    else
+                        buff.id = aura.auraInstanceID
+                    end
                 end
             end
         end
@@ -137,7 +191,7 @@ local function onPlayerAura(info)
 		for _, id in pairs(info.removedAuraInstanceIDs) do
             for _, buff in pairs(buffs) do
                 if buff.id == id then
-                    -- print("Lost: " .. buff.name)
+                    print("Lost: " .. buff.name)
                     buff.id = 0
                 end
             end
@@ -204,5 +258,3 @@ f:RegisterEvent("PLAYER_ENTERING_WORLD")
 f:RegisterEvent("UNIT_AURA")
 f:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
 f:SetScript("OnEvent", onevent)
-
--- loltest("bottom")
