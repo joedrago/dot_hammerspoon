@@ -12,7 +12,7 @@ function addFancyZone(key, x, y, w, h)
         FZDEBUG("Before: (" .. f.x .. "," .. f.y .. ") " .. f.w .. "x" .. f.h .. "")
 
         local screens = hs.screen.allScreens()
-        for i = #screens, 1, -1 do
+        for i = 1,#screens, 1 do
             local screen = screens[i]
             local frame = screen:fullFrame()
             local dx = x + frame.x

@@ -1,2 +1,2 @@
-require("Faceroll")
+require("Faceroll/Faceroll")
 require("FancyZones")
